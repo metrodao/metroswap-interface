@@ -12,7 +12,7 @@ import { useActiveWeb3React } from './index'
 function useAllCommonPairs(
   currencyA?: Currency,
   currencyB?: Currency,
-  platform: RoutablePlatform = RoutablePlatform.HONEYSWAP
+  platform: RoutablePlatform = RoutablePlatform.METROSWAP
 ): Pair[] {
   const { chainId } = useActiveWeb3React()
 
@@ -74,7 +74,7 @@ function useAllCommonPairs(
 export function useTradeExactIn(
   currencyAmountIn?: CurrencyAmount,
   currencyOut?: Currency,
-  platform: RoutablePlatform = RoutablePlatform.HONEYSWAP
+  platform: RoutablePlatform = RoutablePlatform.METROSWAP
 ): Trade | undefined {
   const { chainId } = useActiveWeb3React()
   const allowedPairs = useAllCommonPairs(currencyAmountIn?.currency, currencyOut, platform)
@@ -95,7 +95,7 @@ export function useTradeExactIn(
 export function useTradeExactOut(
   currencyIn?: Currency,
   currencyAmountOut?: CurrencyAmount,
-  platform: RoutablePlatform = RoutablePlatform.HONEYSWAP
+  platform: RoutablePlatform = RoutablePlatform.METROSWAP
 ): Trade | undefined {
   const { chainId } = useActiveWeb3React()
   const allowedPairs = useAllCommonPairs(currencyIn, currencyAmountOut?.currency, platform)
@@ -124,6 +124,7 @@ export function useTradeExactInAllPlatforms(
     useTradeExactIn(currencyAmountIn, currencyOut, RoutablePlatform.UNISWAP),
     useTradeExactIn(currencyAmountIn, currencyOut, RoutablePlatform.SUSHISWAP),
     useTradeExactIn(currencyAmountIn, currencyOut, RoutablePlatform.HONEYSWAP),
+    useTradeExactIn(currencyAmountIn, currencyOut, RoutablePlatform.METROSWAP),
     useTradeExactIn(currencyAmountIn, currencyOut, RoutablePlatform.BAOSWAP),
     useTradeExactIn(currencyAmountIn, currencyOut, RoutablePlatform.QUICKSWAP)
   ]
@@ -143,6 +144,7 @@ export function useTradeExactOutAllPlatforms(
     useTradeExactOut(currencyIn, currencyAmountOut, RoutablePlatform.UNISWAP),
     useTradeExactOut(currencyIn, currencyAmountOut, RoutablePlatform.SUSHISWAP),
     useTradeExactOut(currencyIn, currencyAmountOut, RoutablePlatform.HONEYSWAP),
+    useTradeExactOut(currencyIn, currencyAmountOut, RoutablePlatform.METROSWAP),
     useTradeExactOut(currencyIn, currencyAmountOut, RoutablePlatform.BAOSWAP),
     useTradeExactOut(currencyIn, currencyAmountOut, RoutablePlatform.QUICKSWAP)
   ]

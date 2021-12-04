@@ -12,6 +12,7 @@ import UniswapLogo from '../../assets/svg/uniswap-logo.svg'
 import SwaprLogo from '../../assets/svg/swapr-logo.svg'
 import SushiswapLogo from '../../assets/svg/sushiswap-logo.svg'
 import HoneyswapLogo from '../../assets/svg/honeyswap-logo.svg'
+import MetroswapLogo from '../../assets/svg/metroswap-logo.svg'
 import BaoswapLogo from '../../assets/images/baoswap-logo.png'
 import QuickswapLogo from '../../assets/images/quickswap-logo.png'
 
@@ -20,6 +21,7 @@ const ROUTABLE_PLATFORM_LOGO: { [routablePaltformName: string]: ReactNode } = {
   [RoutablePlatform.SUSHISWAP.name]: <img width={16} height={16} src={SushiswapLogo} alt="sushiswap" />,
   [RoutablePlatform.SWAPR.name]: <img width={16} height={16} src={SwaprLogo} alt="swapr" />,
   [RoutablePlatform.HONEYSWAP.name]: <img width={16} height={16} src={HoneyswapLogo} alt="honeyswap" />,
+  [RoutablePlatform.METROSWAP.name]: <img width={16} height={16} src={MetroswapLogo} alt="metroswap" />,
   [RoutablePlatform.BAOSWAP.name]: <img width={16} height={16} src={BaoswapLogo} alt="baoswap" />,
   [RoutablePlatform.QUICKSWAP.name]: <img width={16} height={16} src={QuickswapLogo} alt="quickswap" />
 }

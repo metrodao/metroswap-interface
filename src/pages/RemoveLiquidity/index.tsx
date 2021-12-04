@@ -119,7 +119,7 @@ export default function RemoveLiquidity({
 
   // allowance handling
   const [signatureData, setSignatureData] = useState<{ v: number; r: string; s: string; deadline: number } | null>(null)
-  const routerAddress = RoutablePlatform.HONEYSWAP.routerAddress[chainId ? chainId : ChainId.XDAI]
+  const routerAddress = RoutablePlatform.METROSWAP.routerAddress[chainId ? chainId : ChainId.XDAI]
   const [approval, approveCallback] = useApproveCallback(parsedAmounts[Field.LIQUIDITY], routerAddress)
 
   async function onAttemptToApprove() {
@@ -157,7 +157,7 @@ export default function RemoveLiquidity({
     if (!currencyAmountA || !currencyAmountB) {
       throw new Error('missing currency amounts')
     }
-    const router = getRouterContract(chainId, library, RoutablePlatform.HONEYSWAP, account)
+    const router = getRouterContract(chainId, library, RoutablePlatform.METROSWAP, account)
 
     const amountsMin = {
       [Field.CURRENCY_A]: calculateSlippageAmount(currencyAmountA, allowedSlippage)[0],

@@ -23,7 +23,7 @@ export enum PairState {
 
 export function usePairs(
   currencies: [Currency | undefined, Currency | undefined][],
-  platform: RoutablePlatform = RoutablePlatform.HONEYSWAP
+  platform: RoutablePlatform = RoutablePlatform.METROSWAP
 ): [PairState, Pair | null][] {
   const { chainId } = useActiveWeb3React()
   const tokens = useMemo(
