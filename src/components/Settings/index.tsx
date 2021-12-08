@@ -196,7 +196,7 @@ const CloseTextButton = styled(LinkStyledButton)`
   text-decoration: underline;
 `
 
-const CODE_LINK = 'https://github.com/1Hive/honeyswap-interface'
+const CODE_LINK = 'https://github.com/metrodao/metroswap-interface'
 
 export default function SettingsTab() {
   const open = useModalOpen(ApplicationModal.SETTINGS)

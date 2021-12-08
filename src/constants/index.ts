@@ -68,6 +68,11 @@ export const HONEY: { [key: number]: Token } = {
   [ChainId.MATIC]: new Token(ChainId.MATIC, '0xb371248dd0f9e4061ccf8850e9223ca48aa7ca4b', 18, 'HNY', 'Honey')
 }
 
+export const METRO: { [key: number]: Token } = {
+  [ChainId.XDAI]: new Token(ChainId.XDAI, '0x71850b7e9ee3f13ab46d67167341e4bdc905eef9', 18, 'HNY', 'Honey'),
+  [ChainId.MATIC]: new Token(ChainId.MATIC, '0xc9616280Cc74B3B2196D32325f5278a7c2B593C4', 18, 'METRO', 'Metro')
+}
+
 export const STAKE = new Token(
   ChainId.XDAI,
   '0xb7D311E2Eb55F2f68a9440da38e7989210b9A05e',
@@ -108,6 +113,7 @@ export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
     USDT[ChainId.XDAI],
     WBTC[ChainId.XDAI],
     HONEY[ChainId.XDAI],
+    METRO[ChainId.XDAI],
     STAKE,
     AGAVE,
     BAO
@@ -116,6 +122,7 @@ export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
     WETH[ChainId.MATIC],
     WMATIC[ChainId.MATIC],
     HONEY[ChainId.MATIC],
+    METRO[ChainId.MATIC],
     DAI[ChainId.MATIC],
     USDC[ChainId.MATIC],
     USDT[ChainId.MATIC],
@@ -132,7 +139,9 @@ export const SUGGESTED_BASES: ChainTokenList = {
   [ChainId.ARBITRUM_TESTNET_V3]: [],
   [ChainId.SOKOL]: [],
   [ChainId.XDAI]: [WETH[ChainId.XDAI], USDC[ChainId.XDAI], HONEY[ChainId.XDAI]],
-  [ChainId.MATIC]: [WETH[ChainId.MATIC], HONEY[ChainId.MATIC]]
+  [ChainId.XDAI]: [WETH[ChainId.XDAI], USDC[ChainId.XDAI], METRO[ChainId.XDAI]],
+  [ChainId.MATIC]: [WETH[ChainId.MATIC], HONEY[ChainId.MATIC]],
+  [ChainId.MATIC]: [WETH[ChainId.MATIC], METRO[ChainId.MATIC]]
 }
 
 // used to construct the list of all pairs we consider by default in the frontend
@@ -146,6 +155,7 @@ export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
     WMATIC[ChainId.MATIC],
     WETH[ChainId.MATIC],
     HONEY[ChainId.MATIC],
+    METRO[ChainId.MATIC],
     DAI[ChainId.MATIC],
     USDC[ChainId.MATIC],
     USDT[ChainId.MATIC]
