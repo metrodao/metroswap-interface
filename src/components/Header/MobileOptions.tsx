@@ -117,7 +117,7 @@ export default function MobileOptions({ history }: { history: any }) {
             </StyledExternalLink>
           </Box>
           <Box>
-            <StyledExternalLink id={`stake-nav-link`} href={'https://info.honeyswap.org/'}>
+            <StyledExternalLink id={`stake-nav-link`} href={'https://info.metroswap.org/'}>
               Charts <span style={{ fontSize: '11px' }}>↗</span>
             </StyledExternalLink>
           </Box>

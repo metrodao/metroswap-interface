@@ -256,21 +256,23 @@ export default function Swap() {
     },
     [onCurrencySelection]
   )
+  
+  // keda: disable discounted ETH trading message
+  // const FEE_MESSAGE_CURRENCIES_CODE = ["ETH"]
 
-  const FEE_MESSAGE_CURRENCIES_CODE = ["ETH"]
-
-
-  const inputCurrency = currencies[Field.INPUT]?.symbol || ""
-  const outputCurrency = currencies[Field.OUTPUT]?.symbol || ""
+  // keda: disable discounted ETH trading message
+  // const inputCurrency = currencies[Field.INPUT]?.symbol || ""
+  // const outputCurrency = currencies[Field.OUTPUT]?.symbol || ""
 
   let currencyMessage = ""
-  if (chainId === 137) {
+  // keda: disable discounted ETH trading message
+  /* if (chainId === 137) {
   if (FEE_MESSAGE_CURRENCIES_CODE.includes(inputCurrency)) { 
     currencyMessage = inputCurrency
   } else if (FEE_MESSAGE_CURRENCIES_CODE.includes(outputCurrency)) {
     currencyMessage = outputCurrency
   }
-  }
+  }*/
   return (
     <>
       <NetworkWarningModal
