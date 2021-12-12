@@ -23,7 +23,8 @@ const ETHERSCAN_PREFIXES: { [chainId in ChainId]: string } = {
   [ChainId.SOKOL]: '',
   [ChainId.XDAI]: '',
   [ChainId.MATIC]: '',
-  [ChainId.AVALANCHE]: ''
+  [ChainId.AVALANCHE]: '',
+  [ChainId.BINANCE]: ''
 }
 
 const getExplorerPrefix = (chainId: ChainId) => {
@@ -38,6 +39,8 @@ const getExplorerPrefix = (chainId: ChainId) => {
       return 'https://polygonscan.com/'
     case ChainId.AVALANCHE:
       return 'https://snowtrace.io'
+    case ChainId.BINANCE:
+      return 'https://bscscan.com'
     default:
       return `https://${ETHERSCAN_PREFIXES[chainId] || ETHERSCAN_PREFIXES[1]}etherscan.io`
   }

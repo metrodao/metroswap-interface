@@ -9,6 +9,7 @@ import ArbitrumLogo from '../../assets/images/arbitrum-logo.jpg'
 import XDAILogo from '../../assets/images/xdai-stake-logo.png'
 import MaticLogo from '../../assets/images/matic-logo.png'
 import AvalancheLogo from '../../assets/images/avalanche-logo.png'
+import BinanceLogo from '../../assets/images/bsc-logo.png'
 import Popover from '../Popover'
 import { useActiveWeb3React } from '../../hooks'
 import { useOnClickOutside } from '../../hooks/useOnClickOutside'
@@ -80,6 +81,13 @@ export default function NetworkSwitcherPopover({ children }: { children: ReactNo
               }}
               header={'Avalanche'}
               logoSrc={AvalancheLogo}
+            />
+            <Option
+              onClick={() => {
+                selectNetwork(ChainId.BINANCE)
+              }}
+              header={'Binance'}
+              logoSrc={BinanceLogo}
             />
             <Option
               onClick={() => {

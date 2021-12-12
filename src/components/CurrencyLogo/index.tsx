@@ -8,6 +8,7 @@ import PoaLogo from '../../assets/images/poa-logo.png'
 import XDAILogo from '../../assets/images/xdai-logo.png'
 import MaticLogo from '../../assets/images/matic-logo.png'
 import AvalancheLogo from '../../assets/images/avalanche-logo.png'
+import BinanceLogo from '../../assets/images/bsc-logo.png'
 import DXDLogo from '../../assets/svg/dxd.svg'
 import { useActiveWeb3React } from '../../hooks'
 import useHttpLocations from '../../hooks/useHttpLocations'
@@ -46,7 +47,8 @@ const NATIVE_CURRENCY_LOGO: { [chainId in ChainId]: string } = {
   [ChainId.SOKOL]: PoaLogo,
   [ChainId.XDAI]: XDAILogo,
   [ChainId.MATIC]: MaticLogo,
-  [ChainId.AVALANCHE]: AvalancheLogo
+  [ChainId.AVALANCHE]: AvalancheLogo,
+  [ChainId.BINANCE]: BinanceLogo
 }
 
 export default function CurrencyLogo({

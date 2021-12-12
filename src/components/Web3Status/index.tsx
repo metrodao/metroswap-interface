@@ -24,6 +24,7 @@ import XDAILogo from '../../assets/images/xdai-stake-logo.png'
 import ArbitrumLogo from '../../assets/images/arbitrum-logo.jpg'
 import MaticLogo from '../../assets/images/matic-logo.png'
 import AvalancheLogo from '../../assets/images/avalanche-logo.png'
+import BinanceLogo from '../../assets/images/bsc-logo.png'
 import { ChainId } from 'dxswap-sdk'
 import { useActiveWeb3React } from '../../hooks'
 
@@ -34,7 +35,8 @@ const ChainLogo: any = {
   [ChainId.SOKOL]: '',
   [ChainId.XDAI]: XDAILogo,
   [ChainId.MATIC]: MaticLogo,
-  [ChainId.AVALANCHE]: AvalancheLogo
+  [ChainId.AVALANCHE]: AvalancheLogo,
+  [ChainId.BINANCE]: BinanceLogo
 }
 
 const ChainLabel: any = {
@@ -44,7 +46,8 @@ const ChainLabel: any = {
   [ChainId.SOKOL]: 'Sokol',
   [ChainId.XDAI]: 'xDai',
   [ChainId.MATIC]: 'Matic',
-  [ChainId.AVALANCHE]: 'Avalanche'
+  [ChainId.AVALANCHE]: 'Avalanche',
+  [ChainId.BINANCE]: 'Binance'
 }
 
 const IconWrapper = styled.div<{ size?: number | null }>`

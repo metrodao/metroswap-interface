@@ -17,7 +17,7 @@ export const network = new CustomNetworkConnector({
 })
 
 export const injected = new InjectedConnector({
-  supportedChainIds: [ChainId.RINKEBY, ChainId.SOKOL, ChainId.XDAI, ChainId.MATIC, ChainId.AVALANCHE]
+  supportedChainIds: [ChainId.RINKEBY, ChainId.SOKOL, ChainId.XDAI, ChainId.MATIC, ChainId.AVALANCHE, ChainId.BINANCE]
 })
 
 export const walletlink = new WalletLinkConnector({
