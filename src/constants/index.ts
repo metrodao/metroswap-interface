@@ -1,5 +1,5 @@
 import { AbstractConnector } from '@web3-react/abstract-connector'
-import { ChainId, JSBI, Percent, CurrencyAmount, WETH, WSPOA, WXDAI, Token, Currency, WMATIC } from 'dxswap-sdk'
+import { ChainId, JSBI, Percent, CurrencyAmount, WETH, WSPOA, WXDAI, Token, Currency, WMATIC, WAVAX } from 'dxswap-sdk'
 import { tokens } from './tokens'
 import { injected, walletConnectMATIC, walletConnectXDAI, walletlink } from '../connectors'
 
@@ -45,7 +45,7 @@ export const USDT: { [key: number]: Token } = {
     'USDT',
     'Tether USD from Ethereum'
   ),
-  [ChainId.MATIC]: new Token(ChainId.MATIC, '0xc2132d05d31c914a87c6611c10748aeb04b58e8f', 6, 'USDT', 'PoS Tether USD')
+  [ChainId.MATIC]: new Token(ChainId.MATIC, '0xc2132d05d31c914a87c6611c10748aeb04b58e8f', 6, 'USDT', 'PoS Tether USD'),
   [ChainId.AVALANCHE]: new Token(ChainId.AVALANCHE, '0xc7198437980c041c805a1edcba50c1ce5db95118', 6, 'USDT.e', 'Tether USD')
 }
 
@@ -339,9 +339,9 @@ export const NETWORK_DETAIL: { [chainId: number]: NetworkDetails } = {
     chainId: `0x${ChainId.AVALANCHE.toString(16)}`,
     chainName: 'Matic',
     nativeCurrency: {
-      name: Currency.AVALANCHE.name || 'Avalanche',
-      symbol: Currency.AVALANCHE.symbol || 'AVAX',
-      decimals: Currency.AVALANCHE.decimals || 18
+      name: Currency.AVAX.name || 'Avalanche',
+      symbol: Currency.AVAX.symbol || 'AVAX',
+      decimals: Currency.AVAX.decimals || 18
     },
     // rpcUrls: [`https://rpc-mainnet.maticvigil.com/v1/${MATIC_PROJECT_ID}`],
     rpcUrls: ['https://api.avax.network/ext/bc/C/rpc'],
