@@ -23,6 +23,7 @@ import EthereumLogo from '../../assets/images/ethereum-logo.png'
 import XDAILogo from '../../assets/images/xdai-stake-logo.png'
 import ArbitrumLogo from '../../assets/images/arbitrum-logo.jpg'
 import MaticLogo from '../../assets/images/matic-logo.png'
+import AvalancheLogo from '../../assets/images/avalanche-logo.png'
 import { ChainId } from 'dxswap-sdk'
 import { useActiveWeb3React } from '../../hooks'
 
@@ -32,7 +33,8 @@ const ChainLogo: any = {
   [ChainId.ARBITRUM_TESTNET_V3]: ArbitrumLogo,
   [ChainId.SOKOL]: '',
   [ChainId.XDAI]: XDAILogo,
-  [ChainId.MATIC]: MaticLogo
+  [ChainId.MATIC]: MaticLogo,
+  [ChainId.AVALANCHE]: AvalancheLogo
 }
 
 const ChainLabel: any = {
@@ -41,7 +43,8 @@ const ChainLabel: any = {
   [ChainId.ARBITRUM_TESTNET_V3]: 'Arbitrum',
   [ChainId.SOKOL]: 'Sokol',
   [ChainId.XDAI]: 'xDai',
-  [ChainId.MATIC]: 'Matic'
+  [ChainId.MATIC]: 'Matic',
+  [ChainId.AVALANCHE]: 'Avalanche'
 }
 
 const IconWrapper = styled.div<{ size?: number | null }>`

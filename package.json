@@ -1,6 +1,6 @@
 {
   "name": "metroswap-interface",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "DXswap Decentralized Application",
   "devDependencies": {
     "@apollo/client": "^3.3.13",

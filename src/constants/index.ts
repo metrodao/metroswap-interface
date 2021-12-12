@@ -19,7 +19,8 @@ export const DAI: { [key: number]: Token } = {
     'Dai Stablecoin'
   ),
   [ChainId.XDAI]: new Token(ChainId.XDAI, '0x44fa8e6f47987339850636f88629646662444217', 18, 'DAI', 'Dai Stablecoin'),
-  [ChainId.MATIC]: new Token(ChainId.MATIC, '0x8f3cf7ad23cd3cadbd9735aff958023239c6a063', 18, 'DAI', 'Dai Stablecoin')
+  [ChainId.MATIC]: new Token(ChainId.MATIC, '0x8f3cf7ad23cd3cadbd9735aff958023239c6a063', 18, 'DAI', 'Dai Stablecoin'),
+  [ChainId.AVALANCHE]: new Token(ChainId.AVALANCHE, '0xd586E7F844cEa2F87f50152665BCbc2C279D8d70', 18, 'DAI.e', 'Dai Stablecoin')
 }
 
 export const USDC: { [key: number]: Token } = {
@@ -31,7 +32,8 @@ export const USDC: { [key: number]: Token } = {
     'USDC',
     'USD//C from Ethereum'
   ),
-  [ChainId.MATIC]: new Token(ChainId.MATIC, '0x2791bca1f2de4661ed88a30c99a7a9449aa84174', 6, 'USDC', 'PoS USDC')
+  [ChainId.MATIC]: new Token(ChainId.MATIC, '0x2791bca1f2de4661ed88a30c99a7a9449aa84174', 6, 'USDC', 'PoS USDC'),
+  [ChainId.AVALANCHE]: new Token(ChainId.AVALANCHE, '0xA7D7079b0FEaD91F3e65f86E8915Cb59c1a4C664', 6, 'USDC.e', 'USD Coin')
 }
 
 export const USDT: { [key: number]: Token } = {
@@ -44,6 +46,7 @@ export const USDT: { [key: number]: Token } = {
     'Tether USD from Ethereum'
   ),
   [ChainId.MATIC]: new Token(ChainId.MATIC, '0xc2132d05d31c914a87c6611c10748aeb04b58e8f', 6, 'USDT', 'PoS Tether USD')
+  [ChainId.AVALANCHE]: new Token(ChainId.AVALANCHE, '0xc7198437980c041c805a1edcba50c1ce5db95118', 6, 'USDT.e', 'Tether USD')
 }
 
 export const WBTC: { [key: number]: Token } = {
@@ -60,6 +63,20 @@ export const WBTC: { [key: number]: Token } = {
     18,
     'WBTC',
     'Wrapped BTC from Ethereum'
+  ),
+  [ChainId.MATIC]: new Token(
+    ChainId.MATIC,
+    '0x1bfd67037b42cf73acf2047067bd4f2c47d9bfd6',
+    18,
+    'WBTC',
+    '(PoS) Wrapped BTC'
+  ),
+  [ChainId.AVALANCHE]: new Token(
+    ChainId.AVALANCHE,
+    '0x50b7545627a5162f82a992c33b87adc75187b218',
+    18,
+    'WBTC',
+    'Wrapped BTC'
   )
 }
 
@@ -128,6 +145,14 @@ export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
     USDT[ChainId.MATIC],
     SURF,
     WAVE
+  ],
+  [ChainId.AVALANCHE]: [
+    WBTC[ChainId.AVALANCHE],
+    WETH[ChainId.AVALANCHE],
+    WAVAX[ChainId.AVALANCHE],
+    DAI[ChainId.AVALANCHE],
+    USDC[ChainId.AVALANCHE],
+    USDT[ChainId.AVALANCHE]
   ]
 }
 
@@ -141,7 +166,8 @@ export const SUGGESTED_BASES: ChainTokenList = {
   [ChainId.XDAI]: [WETH[ChainId.XDAI], USDC[ChainId.XDAI], HONEY[ChainId.XDAI]],
   [ChainId.XDAI]: [WETH[ChainId.XDAI], USDC[ChainId.XDAI], METRO[ChainId.XDAI]],
   [ChainId.MATIC]: [WETH[ChainId.MATIC], HONEY[ChainId.MATIC]],
-  [ChainId.MATIC]: [WETH[ChainId.MATIC], METRO[ChainId.MATIC]]
+  [ChainId.MATIC]: [WETH[ChainId.MATIC], METRO[ChainId.MATIC]],
+  [ChainId.AVALANCHE]: [DAI[ChainId.AVALANCHE], USDC[ChainId.AVALANCHE], USDT[ChainId.AVALANCHE], WBTC[ChainId.AVALANCHE]]
 }
 
 // used to construct the list of all pairs we consider by default in the frontend
@@ -159,7 +185,8 @@ export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
     DAI[ChainId.MATIC],
     USDC[ChainId.MATIC],
     USDT[ChainId.MATIC]
-  ]
+  ],
+  [ChainId.AVALANCHE]: [WETH[ChainId.AVALANCHE], DAI[ChainId.AVALANCHE], USDC[ChainId.AVALANCHE], USDT[ChainId.AVALANCHE]],
 }
 
 export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } = {
@@ -306,6 +333,19 @@ export const NETWORK_DETAIL: { [chainId: number]: NetworkDetails } = {
     // rpcUrls: [`https://rpc-mainnet.maticvigil.com/v1/${MATIC_PROJECT_ID}`],
     rpcUrls: ['https://poly-mainnet.gateway.pokt.network/v1/lb/61141e8259501900341bb3e2'],
     blockExplorerUrls: ['https://explorer.matic.network/'],
+    metamaskAddable: true
+  },
+  [ChainId.AVALANCHE]: {
+    chainId: `0x${ChainId.AVALANCHE.toString(16)}`,
+    chainName: 'Matic',
+    nativeCurrency: {
+      name: Currency.AVALANCHE.name || 'Avalanche',
+      symbol: Currency.AVALANCHE.symbol || 'AVAX',
+      decimals: Currency.AVALANCHE.decimals || 18
+    },
+    // rpcUrls: [`https://rpc-mainnet.maticvigil.com/v1/${MATIC_PROJECT_ID}`],
+    rpcUrls: ['https://api.avax.network/ext/bc/C/rpc'],
+    blockExplorerUrls: ['https://snowtrache.io/'],
     metamaskAddable: true
   }
 }
