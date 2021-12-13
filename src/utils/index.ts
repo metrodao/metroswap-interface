@@ -24,7 +24,8 @@ const ETHERSCAN_PREFIXES: { [chainId in ChainId]: string } = {
   [ChainId.XDAI]: '',
   [ChainId.MATIC]: '',
   [ChainId.AVALANCHE]: '',
-  [ChainId.BINANCE]: ''
+  [ChainId.BINANCE]: '',
+  [ChainId.FUSE]: '',
 }
 
 const getExplorerPrefix = (chainId: ChainId) => {
@@ -41,6 +42,8 @@ const getExplorerPrefix = (chainId: ChainId) => {
       return 'https://snowtrace.io'
     case ChainId.BINANCE:
       return 'https://bscscan.com'
+    case ChainId.FUSE:
+      return 'https://explorer.fuse.io'
     default:
       return `https://${ETHERSCAN_PREFIXES[chainId] || ETHERSCAN_PREFIXES[1]}etherscan.io`
   }

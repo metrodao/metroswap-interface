@@ -1,5 +1,5 @@
 import { AbstractConnector } from '@web3-react/abstract-connector'
-import { ChainId, JSBI, Percent, CurrencyAmount, WETH, WSPOA, WXDAI, Token, Currency, WMATIC, WAVAX, WBNB } from 'dxswap-sdk'
+import { ChainId, JSBI, Percent, CurrencyAmount, WETH, WSPOA, WXDAI, Token, Currency, WMATIC, WAVAX, WBNB, WFUSE } from 'dxswap-sdk'
 import { tokens } from './tokens'
 import { injected, walletConnectMATIC, walletConnectXDAI, walletlink } from '../connectors'
 
@@ -21,7 +21,8 @@ export const DAI: { [key: number]: Token } = {
   [ChainId.XDAI]: new Token(ChainId.XDAI, '0x44fa8e6f47987339850636f88629646662444217', 18, 'DAI', 'Dai Stablecoin'),
   [ChainId.MATIC]: new Token(ChainId.MATIC, '0x8f3cf7ad23cd3cadbd9735aff958023239c6a063', 18, 'DAI', 'Dai Stablecoin'),
   [ChainId.AVALANCHE]: new Token(ChainId.AVALANCHE, '0xd586E7F844cEa2F87f50152665BCbc2C279D8d70', 18, 'DAI.e', 'Dai Stablecoin'),
-  [ChainId.BINANCE]: new Token(ChainId.BINANCE, '0x1AF3F329e8BE154074D8769D1FFa4eE058B1DBc3', 18, 'DAI', 'Binance-Peg Dai Token')
+  [ChainId.BINANCE]: new Token(ChainId.BINANCE, '0x1AF3F329e8BE154074D8769D1FFa4eE058B1DBc3', 18, 'DAI', 'Binance-Peg Dai Token'),
+  [ChainId.FUSE]: new Token(ChainId.FUSE, '0x94Ba7A27c7A95863d1bdC7645AC2951E0cca06bA', 18, 'DAI', 'Dai Stablecoin on Fuse')
 }
 
 export const USDC: { [key: number]: Token } = {
@@ -35,7 +36,8 @@ export const USDC: { [key: number]: Token } = {
   ),
   [ChainId.MATIC]: new Token(ChainId.MATIC, '0x2791bca1f2de4661ed88a30c99a7a9449aa84174', 6, 'USDC', 'PoS USDC'),
   [ChainId.AVALANCHE]: new Token(ChainId.AVALANCHE, '0xA7D7079b0FEaD91F3e65f86E8915Cb59c1a4C664', 6, 'USDC.e', 'USD Coin'),
-  [ChainId.BINANCE]: new Token(ChainId.BINANCE, '0xA7D7079b0FEaD91F3e65f86E8915Cb59c1a4C664', 6, 'USDC', 'Binance-Peg USD Coin')
+  [ChainId.BINANCE]: new Token(ChainId.BINANCE, '0xA7D7079b0FEaD91F3e65f86E8915Cb59c1a4C664', 6, 'USDC', 'Binance-Peg USD Coin'),
+  [ChainId.FUSE]: new Token(ChainId.FUSE, '0x620fd5fa44BE6af63715Ef4E65DDFA0387aD13F5', 6, 'USDC', 'USD Coin on Fuse')
 }
 
 export const USDT: { [key: number]: Token } = {
@@ -49,7 +51,8 @@ export const USDT: { [key: number]: Token } = {
   ),
   [ChainId.MATIC]: new Token(ChainId.MATIC, '0xc2132d05d31c914a87c6611c10748aeb04b58e8f', 6, 'USDT', 'PoS Tether USD'),
   [ChainId.AVALANCHE]: new Token(ChainId.AVALANCHE, '0xc7198437980c041c805a1edcba50c1ce5db95118', 6, 'USDT.e', 'Tether USD'),
-  [ChainId.BINANCE]: new Token(ChainId.BINANCE, '0x55d398326f99059ff775485246999027b3197955', 6, 'USDT', 'Tether USD')
+  [ChainId.BINANCE]: new Token(ChainId.BINANCE, '0x55d398326f99059ff775485246999027b3197955', 6, 'USDT', 'Tether USD'),
+  [ChainId.FUSE]: new Token(ChainId.FUSE, '0xFaDbBF8Ce7D5b7041bE672561bbA99f79c532e10', 6, 'USDT', 'Tether USD on Fuse')
 }
 
 export const WBTC: { [key: number]: Token } = {
@@ -88,6 +91,13 @@ export const WBTC: { [key: number]: Token } = {
     18,
     'BTCB',
     'Binance-Peg BTCB Token (BTCB)'
+  ),
+  [ChainId.FUSE]: new Token(
+    ChainId.FUSE,
+    '0x33284f95ccb7B948d9D352e1439561CF83d8d00d',
+    18,
+    'WBTC',
+    'Wrapped BTC on Fuse'
   )
 }
 
@@ -170,6 +180,13 @@ export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
     DAI[ChainId.BINANCE],
     USDC[ChainId.BINANCE],
     USDT[ChainId.BINANCE]
+  ],
+  [ChainId.FUSE]: [
+    WETH[ChainId.FUSE],
+    WFUSE[ChainId.FUSE],
+    DAI[ChainId.FUSE],
+    USDC[ChainId.FUSE],
+    USDT[ChainId.FUSE]
   ]
 }
 
@@ -185,7 +202,8 @@ export const SUGGESTED_BASES: ChainTokenList = {
   [ChainId.MATIC]: [WETH[ChainId.MATIC], HONEY[ChainId.MATIC]],
   [ChainId.MATIC]: [WETH[ChainId.MATIC], METRO[ChainId.MATIC]],
   [ChainId.AVALANCHE]: [DAI[ChainId.AVALANCHE], USDC[ChainId.AVALANCHE], USDT[ChainId.AVALANCHE], WBTC[ChainId.AVALANCHE]],
-  [ChainId.BINANCE]: [DAI[ChainId.BINANCE], USDC[ChainId.BINANCE], USDT[ChainId.BINANCE], WBTC[ChainId.BINANCE]]
+  [ChainId.BINANCE]: [DAI[ChainId.BINANCE], USDC[ChainId.BINANCE], USDT[ChainId.BINANCE], WBTC[ChainId.BINANCE]],
+  [ChainId.FUSE]: [DAI[ChainId.FUSE], USDC[ChainId.FUSE], USDT[ChainId.FUSE], WBTC[ChainId.FUSE]]
 }
 
 // used to construct the list of all pairs we consider by default in the frontend
@@ -205,7 +223,8 @@ export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
     USDT[ChainId.MATIC]
   ],
   [ChainId.AVALANCHE]: [WETH[ChainId.AVALANCHE], DAI[ChainId.AVALANCHE], USDC[ChainId.AVALANCHE], USDT[ChainId.AVALANCHE]],
-  [ChainId.BINANCE]: [WETH[ChainId.BINANCE], DAI[ChainId.BINANCE], USDC[ChainId.BINANCE], USDT[ChainId.BINANCE]]
+  [ChainId.BINANCE]: [WETH[ChainId.BINANCE], DAI[ChainId.BINANCE], USDC[ChainId.BINANCE], USDT[ChainId.BINANCE]],
+  [ChainId.FUSE]: [WETH[ChainId.FUSE], DAI[ChainId.FUSE], USDC[ChainId.FUSE], USDT[ChainId.FUSE]]
 }
 
 export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } = {
@@ -378,6 +397,19 @@ export const NETWORK_DETAIL: { [chainId: number]: NetworkDetails } = {
     // rpcUrls: [`https://rpc-mainnet.maticvigil.com/v1/${MATIC_PROJECT_ID}`],
     rpcUrls: ['https://bsc-dataseed1.ninicoin.io'],
     blockExplorerUrls: ['https://bscscan.com/'],
+    metamaskAddable: true
+  },
+  [ChainId.FUSE]: {
+    chainId: `0x${ChainId.FUSE.toString(16)}`,
+    chainName: 'Fuse',
+    nativeCurrency: {
+      name: Currency.FUSE.name || 'Fuse',
+      symbol: Currency.FUSE.symbol || 'FUSE',
+      decimals: Currency.FUSE.decimals || 18
+    },
+    // rpcUrls: [`https://rpc-mainnet.maticvigil.com/v1/${MATIC_PROJECT_ID}`],
+    rpcUrls: ['https://rpc.fuse.io'],
+    blockExplorerUrls: ['https://explorer.fuse.io/'],
     metamaskAddable: true
   }
 }
