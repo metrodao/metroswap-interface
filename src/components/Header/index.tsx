@@ -268,7 +268,7 @@ function Header({ history }: { history: any }) {
               ↗
             </Text>
           </StyledExternalLink>
-          <StyledExternalLink id={`stake-nav-link`} href={`https://info.metroswap.org/#/?chainId=137`}>
+          <StyledExternalLink id={`stake-nav-link`} href={`https://info.metroswap.org/`}>
             Charts{' '}
             <Text ml="4px" fontSize="11px">
               ↗

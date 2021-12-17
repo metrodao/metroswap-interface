@@ -10,6 +10,9 @@ import MaticLogo from '../../assets/images/matic-logo.png'
 import AvalancheLogo from '../../assets/images/avalanche-logo.png'
 import BinanceLogo from '../../assets/images/bsc-logo.png'
 import FuseLogo from '../../assets/images/fuse-logo.png'
+import IotexLogo from '../../assets/images/iotex-logo.png'
+import FantomLogo from '../../assets/images/fantom-logo.png'
+import HarmonyLogo from '../../assets/images/harmony-logo.png'
 import DXDLogo from '../../assets/svg/dxd.svg'
 import { useActiveWeb3React } from '../../hooks'
 import useHttpLocations from '../../hooks/useHttpLocations'
@@ -50,7 +53,10 @@ const NATIVE_CURRENCY_LOGO: { [chainId in ChainId]: string } = {
   [ChainId.MATIC]: MaticLogo,
   [ChainId.AVALANCHE]: AvalancheLogo,
   [ChainId.BINANCE]: BinanceLogo,
-  [ChainId.FUSE]: FuseLogo
+  [ChainId.FUSE]: FuseLogo,
+  [ChainId.IOTEX]: IotexLogo,
+  [ChainId.FANTOM]: FantomLogo,
+  [ChainId.HARMONY]: HarmonyLogo
 }
 
 export default function CurrencyLogo({

@@ -26,6 +26,9 @@ const ETHERSCAN_PREFIXES: { [chainId in ChainId]: string } = {
   [ChainId.AVALANCHE]: '',
   [ChainId.BINANCE]: '',
   [ChainId.FUSE]: '',
+  [ChainId.IOTEX]: '',
+  [ChainId.FANTOM]: '',
+  [ChainId.HARMONY]: ''
 }
 
 const getExplorerPrefix = (chainId: ChainId) => {
@@ -44,6 +47,12 @@ const getExplorerPrefix = (chainId: ChainId) => {
       return 'https://bscscan.com'
     case ChainId.FUSE:
       return 'https://explorer.fuse.io'
+    case ChainId.IOTEX:
+      return 'https://iotexscan.io'
+    case ChainId.FANTOM:
+      return 'https://ftmscan.com'
+    case ChainId.HARMONY:
+      return 'https://explorer.harmony.one'
     default:
       return `https://${ETHERSCAN_PREFIXES[chainId] || ETHERSCAN_PREFIXES[1]}etherscan.io`
   }

@@ -11,6 +11,9 @@ import MaticLogo from '../../assets/images/matic-logo.png'
 import AvalancheLogo from '../../assets/images/avalanche-logo.png'
 import BinanceLogo from '../../assets/images/bsc-logo.png'
 import FuseLogo from '../../assets/images/fuse-logo.png'
+import IotexLogo from '../../assets/images/iotex-logo.png'
+import FantomLogo from '../../assets/images/fantom-logo.png'
+import HarmonyLogo from '../../assets/images/harmony-logo.png'
 import Popover from '../Popover'
 import { useActiveWeb3React } from '../../hooks'
 import { useOnClickOutside } from '../../hooks/useOnClickOutside'
@@ -96,6 +99,27 @@ export default function NetworkSwitcherPopover({ children }: { children: ReactNo
               }}
               header={'FUSE'}
               logoSrc={FuseLogo}
+            />
+            <Option
+              onClick={() => {
+                selectNetwork(ChainId.IOTEX)
+              }}
+              header={'IoTeX'}
+              logoSrc={IotexLogo}
+            />
+            <Option
+              onClick={() => {
+                selectNetwork(ChainId.FANTOM)
+              }}
+              header={'Fantom'}
+              logoSrc={FantomLogo}
+            />
+            <Option
+              onClick={() => {
+                selectNetwork(ChainId.HARMONY)
+              }}
+              header={'Harmony'}
+              logoSrc={HarmonyLogo}
             />
             <Option
               onClick={() => {

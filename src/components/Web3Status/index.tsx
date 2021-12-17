@@ -26,6 +26,9 @@ import MaticLogo from '../../assets/images/matic-logo.png'
 import AvalancheLogo from '../../assets/images/avalanche-logo.png'
 import BinanceLogo from '../../assets/images/bsc-logo.png'
 import FuseLogo from '../../assets/images/fuse-logo.png'
+import IotexLogo from '../../assets/images/iotex-logo.png'
+import FantomLogo from '../../assets/images/fantom-logo.png'
+import HarmonyLogo from '../../assets/images/harmony-logo.png'
 import { ChainId } from 'dxswap-sdk'
 import { useActiveWeb3React } from '../../hooks'
 
@@ -38,7 +41,10 @@ const ChainLogo: any = {
   [ChainId.MATIC]: MaticLogo,
   [ChainId.AVALANCHE]: AvalancheLogo,
   [ChainId.BINANCE]: BinanceLogo,
-  [ChainId.FUSE]: FuseLogo
+  [ChainId.FUSE]: FuseLogo,
+  [ChainId.IOTEX]: IotexLogo,
+  [ChainId.FANTOM]: FantomLogo,
+  [ChainId.HARMONY]: HarmonyLogo
 }
 
 const ChainLabel: any = {
@@ -50,7 +56,10 @@ const ChainLabel: any = {
   [ChainId.MATIC]: 'Matic',
   [ChainId.AVALANCHE]: 'Avalanche',
   [ChainId.BINANCE]: 'Binance',
-  [ChainId.FUSE]: 'Fuse'
+  [ChainId.FUSE]: 'Fuse',
+  [ChainId.IOTEX]: 'IoTeX',
+  [ChainId.FANTOM]: 'Fantom',
+  [ChainId.HARMONY]: 'Harmony'
 }
 
 const IconWrapper = styled.div<{ size?: number | null }>`
