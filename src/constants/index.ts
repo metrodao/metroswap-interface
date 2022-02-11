@@ -1,5 +1,5 @@
 import { AbstractConnector } from '@web3-react/abstract-connector'
-import { ChainId, JSBI, Percent, CurrencyAmount, WETH, WSPOA, WXDAI, Token, Currency, WMATIC, WAVAX, WBNB, WFUSE, WIOTX, WFTM, WONE } from 'dxswap-sdk'
+import { ChainId, JSBI, Percent, CurrencyAmount, WETH, WSPOA, WXDAI, Token, Currency, WMATIC, WAVAX, WBNB, WFUSE, WIOTX, WFTM, WONE, WBTT } from 'dxswap-sdk'
 import { tokens } from './tokens'
 import { injected, walletConnectMATIC, walletConnectXDAI, walletlink } from '../connectors'
 
@@ -25,7 +25,8 @@ export const DAI: { [key: number]: Token } = {
   [ChainId.FUSE]: new Token(ChainId.FUSE, '0x94Ba7A27c7A95863d1bdC7645AC2951E0cca06bA', 18, 'DAI', 'Dai Stablecoin on Fuse'),
   [ChainId.IOTEX]: new Token(ChainId.IOTEX, '0x62a9D987Cbf4C45a550DEEd5B57b200d7a319632', 18, 'DAI-matic', 'Dai Matic Stablecoin'),
   [ChainId.FANTOM]: new Token(ChainId.FANTOM, '0x8D11eC38a3EB5E956B052f67Da8Bdc9bef8Abf3E', 18, 'DAI', 'Dai Stablecoin'),
-  [ChainId.HARMONY]: new Token(ChainId.HARMONY, '0xEf977d2f931C1978Db5F6747666fa1eACB0d0339', 18, '1DAI', 'Dai Stablecoin')
+  [ChainId.HARMONY]: new Token(ChainId.HARMONY, '0xEf977d2f931C1978Db5F6747666fa1eACB0d0339', 18, '1DAI', 'Dai Stablecoin'),
+  [ChainId.BITTORRENT]: new Token(ChainId.BITTORRENT, '0xE6F3a758298d88Ae5fA56d632D4e195a44A9Ae96', 18, 'bDAI', 'Bridged DAI (PoS)') // currently Tetcoin Bridge Token on BTT Chain
 }
 
 export const USDC: { [key: number]: Token } = {
@@ -43,7 +44,8 @@ export const USDC: { [key: number]: Token } = {
   [ChainId.FUSE]: new Token(ChainId.FUSE, '0x620fd5fa44BE6af63715Ef4E65DDFA0387aD13F5', 6, 'USDC', 'USD Coin on Fuse'),
   [ChainId.IOTEX]: new Token(ChainId.IOTEX, '0x3B2bf2b523f54C4E454F08Aa286D03115aFF326c', 6, 'ioUSDC', 'USD Coin'),
   [ChainId.FANTOM]: new Token(ChainId.FANTOM, '0x04068DA6C83AFCFA0e13ba15A6696662335D5B75', 6, 'USDC', 'USD Coin'),
-  [ChainId.HARMONY]: new Token(ChainId.HARMONY, '0x985458E523dB3d53125813eD68c274899e9DfAb4', 6, '1USDC', 'USD Coin')
+  [ChainId.HARMONY]: new Token(ChainId.HARMONY, '0x985458E523dB3d53125813eD68c274899e9DfAb4', 6, '1USDC', 'USD Coin'),
+  [ChainId.BITTORRENT]: new Token(ChainId.BITTORRENT, '0xCa424b845497f7204D9301bd13Ff87C0E2e86FCF', 6, 'USDC', 'USD Coin BSC')
 }
 
 export const USDT: { [key: number]: Token } = {
@@ -61,7 +63,8 @@ export const USDT: { [key: number]: Token } = {
   [ChainId.FUSE]: new Token(ChainId.FUSE, '0xFaDbBF8Ce7D5b7041bE672561bbA99f79c532e10', 6, 'USDT', 'Tether USD on Fuse'),
   [ChainId.IOTEX]: new Token(ChainId.IOTEX, '0x6fbCdc1169B5130C59E72E51Ed68A84841C98cd1', 6, 'ioUSDT', 'Tether USD'),
   [ChainId.FANTOM]: new Token(ChainId.FANTOM, '0x049d68029688eAbF473097a2fC38ef61633A3C7A', 6, 'fUSDT', 'Frapped USDT'),
-  [ChainId.HARMONY]: new Token(ChainId.HARMONY, '0x3C2B8Be99c50593081EAA2A724F0B8285F5aba8f', 6, '1USDT', 'Tether USD')
+  [ChainId.HARMONY]: new Token(ChainId.HARMONY, '0x3C2B8Be99c50593081EAA2A724F0B8285F5aba8f', 6, '1USDT', 'Tether USD'),
+  [ChainId.BITTORRENT]: new Token(ChainId.BITTORRENT, '0xdB28719F7f938507dBfe4f0eAe55668903D34a15', 6, 'USDT_t', 'Tether USD_TRON')
 }
 
 export const WBTC: { [key: number]: Token } = {
@@ -128,6 +131,13 @@ export const WBTC: { [key: number]: Token } = {
     18,
     '1WBTC',
     'Wrapped BTC'
+  ),
+  [ChainId.BITTORRENT]: new Token(
+    ChainId.BITTORRENT,
+    '0xA98b43551e9777e82616AEe9b6C5f3fb25A20386',
+    8,
+    'bBTC',
+    'Bridge Bitcoin (PoS)'
   )
 }
 
@@ -238,6 +248,13 @@ export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
     DAI[ChainId.HARMONY],
     USDC[ChainId.HARMONY],
     USDT[ChainId.HARMONY]
+  ],
+  [ChainId.BITTORRENT]: [
+    WETH[ChainId.BITTORRENT],
+    WBTT[ChainId.BITTORRENT],
+    DAI[ChainId.BITTORRENT],
+    USDC[ChainId.BITTORRENT],
+    USDT[ChainId.BITTORRENT]
   ]
 }
 
@@ -257,7 +274,8 @@ export const SUGGESTED_BASES: ChainTokenList = {
   [ChainId.FUSE]: [DAI[ChainId.FUSE], USDC[ChainId.FUSE], USDT[ChainId.FUSE], WBTC[ChainId.FUSE]],
   [ChainId.IOTEX]: [DAI[ChainId.IOTEX], USDC[ChainId.IOTEX], USDT[ChainId.IOTEX], WBTC[ChainId.IOTEX]],
   [ChainId.FANTOM]: [DAI[ChainId.FANTOM], USDC[ChainId.FANTOM], USDT[ChainId.FANTOM], WBTC[ChainId.FANTOM]],
-  [ChainId.HARMONY]: [DAI[ChainId.HARMONY], USDC[ChainId.HARMONY], USDT[ChainId.HARMONY], WBTC[ChainId.HARMONY]]
+  [ChainId.HARMONY]: [DAI[ChainId.HARMONY], USDC[ChainId.HARMONY], USDT[ChainId.HARMONY], WBTC[ChainId.HARMONY]],
+  [ChainId.BITTORRENT]: [DAI[ChainId.BITTORRENT], USDC[ChainId.BITTORRENT], USDT[ChainId.BITTORRENT]]
 }
 
 // used to construct the list of all pairs we consider by default in the frontend
@@ -281,7 +299,8 @@ export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
   [ChainId.FUSE]: [WETH[ChainId.FUSE], DAI[ChainId.FUSE], USDC[ChainId.FUSE], USDT[ChainId.FUSE]],
   [ChainId.IOTEX]: [WETH[ChainId.IOTEX], DAI[ChainId.IOTEX], USDC[ChainId.IOTEX], USDT[ChainId.IOTEX]],
   [ChainId.FANTOM]: [WETH[ChainId.FANTOM], DAI[ChainId.FANTOM], USDC[ChainId.FANTOM], USDT[ChainId.FANTOM]],
-  [ChainId.HARMONY]: [WETH[ChainId.HARMONY], DAI[ChainId.HARMONY], USDC[ChainId.HARMONY], USDT[ChainId.HARMONY]]
+  [ChainId.HARMONY]: [WETH[ChainId.HARMONY], DAI[ChainId.HARMONY], USDC[ChainId.HARMONY], USDT[ChainId.HARMONY]],
+  [ChainId.BITTORRENT]: [WETH[ChainId.BITTORRENT], DAI[ChainId.BITTORRENT], USDC[ChainId.BITTORRENT], USDT[ChainId.BITTORRENT]]
 }
 
 export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } = {
@@ -503,6 +522,18 @@ export const NETWORK_DETAIL: { [chainId: number]: NetworkDetails } = {
     },
     rpcUrls: ['https://api.harmony.one'],
     blockExplorerUrls: ['https://explorer.harmony.one/'],
+    metamaskAddable: true
+  },
+  [ChainId.BITTORRENT]: {
+    chainId: `0x${ChainId.BITTORRENT.toString(16)}`,
+    chainName: 'BitTorrent',
+    nativeCurrency: {
+      name: Currency.BTT.name || 'BitTorrent',
+      symbol: Currency.BTT.symbol || 'BTT',
+      decimals: Currency.BTT.decimals || 18
+    },
+    rpcUrls: ['https://rpc.bt.io/'],
+    blockExplorerUrls: ['https://scan.bt.io/'],
     metamaskAddable: true
   }
 }

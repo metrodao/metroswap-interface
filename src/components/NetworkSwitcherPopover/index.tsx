@@ -14,6 +14,7 @@ import FuseLogo from '../../assets/images/fuse-logo.png'
 import IotexLogo from '../../assets/images/iotex-logo.png'
 import FantomLogo from '../../assets/images/fantom-logo.png'
 import HarmonyLogo from '../../assets/images/harmony-logo.png'
+import BittorrentLogo from '../../assets/images/bittorrent-logo.png'
 import Popover from '../Popover'
 import { useActiveWeb3React } from '../../hooks'
 import { useOnClickOutside } from '../../hooks/useOnClickOutside'
@@ -92,6 +93,13 @@ export default function NetworkSwitcherPopover({ children }: { children: ReactNo
               }}
               header={'Binance'}
               logoSrc={BinanceLogo}
+            />
+            <Option
+              onClick={() => {
+                selectNetwork(ChainId.BITTORRENT)
+              }}
+              header={'BitTorrent'}
+              logoSrc={BittorrentLogo}
             />
             <Option
               onClick={() => {

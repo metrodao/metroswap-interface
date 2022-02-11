@@ -27,7 +27,8 @@ export const injected = new InjectedConnector({
       ChainId.FUSE, 
       ChainId.IOTEX,
       ChainId.FANTOM,
-      ChainId.HARMONY
+      ChainId.HARMONY,
+      ChainId.BITTORRENT
     ]
 })
 
