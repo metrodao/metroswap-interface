@@ -14,6 +14,7 @@ import IotexLogo from '../../assets/images/iotex-logo.png'
 import FantomLogo from '../../assets/images/fantom-logo.png'
 import HarmonyLogo from '../../assets/images/harmony-logo.png'
 import BittorrentLogo from '../../assets/images/bittorrent-logo.png'
+import CallistoLogo from '../../assets/images/callisto-logo.png'
 import DXDLogo from '../../assets/svg/dxd.svg'
 import { useActiveWeb3React } from '../../hooks'
 import useHttpLocations from '../../hooks/useHttpLocations'
@@ -58,7 +59,8 @@ const NATIVE_CURRENCY_LOGO: { [chainId in ChainId]: string } = {
   [ChainId.IOTEX]: IotexLogo,
   [ChainId.FANTOM]: FantomLogo,
   [ChainId.HARMONY]: HarmonyLogo,
-  [ChainId.BITTORRENT]: BittorrentLogo
+  [ChainId.BITTORRENT]: BittorrentLogo,
+  [ChainId.CALLISTO]: CallistoLogo
 }
 
 export default function CurrencyLogo({

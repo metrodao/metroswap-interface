@@ -30,6 +30,7 @@ import IotexLogo from '../../assets/images/iotex-logo.png'
 import FantomLogo from '../../assets/images/fantom-logo.png'
 import HarmonyLogo from '../../assets/images/harmony-logo.png'
 import BittorrentLogo from '../../assets/images/bittorrent-logo.png'
+import CallistoLogo from '../../assets/images/callisto-logo.png'
 import { ChainId } from 'dxswap-sdk'
 import { useActiveWeb3React } from '../../hooks'
 
@@ -46,7 +47,8 @@ const ChainLogo: any = {
   [ChainId.IOTEX]: IotexLogo,
   [ChainId.FANTOM]: FantomLogo,
   [ChainId.HARMONY]: HarmonyLogo,
-  [ChainId.BITTORRENT]: BittorrentLogo
+  [ChainId.BITTORRENT]: BittorrentLogo,
+  [ChainId.CALLISTO]: CallistoLogo
 }
 
 const ChainLabel: any = {
@@ -62,7 +64,8 @@ const ChainLabel: any = {
   [ChainId.IOTEX]: 'IoTeX',
   [ChainId.FANTOM]: 'Fantom',
   [ChainId.HARMONY]: 'Harmony',
-  [ChainId.BITTORRENT]: 'BitTorrent'
+  [ChainId.BITTORRENT]: 'BitTorrent',
+  [ChainId.CALLISTO]: 'Callisto'
 }
 
 const IconWrapper = styled.div<{ size?: number | null }>`

@@ -28,7 +28,8 @@ export const injected = new InjectedConnector({
       ChainId.IOTEX,
       ChainId.FANTOM,
       ChainId.HARMONY,
-      ChainId.BITTORRENT
+      ChainId.BITTORRENT,
+      ChainId.CALLISTO
     ]
 })
 

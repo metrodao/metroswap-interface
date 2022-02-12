@@ -1184,9 +1184,9 @@
     regenerator-runtime "^0.13.4"
 
 "@babel/runtime@^7.7.4":
-  version "7.17.0"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.17.0.tgz#b8d142fc0f7664fb3d9b5833fd40dcbab89276c0"
-  integrity sha512-etcO/ohMNaNA2UBdaXBBSX/3aEzFMRrVfaPv8Ptc0k+cWpWW0QFiGZ2XnVqQZI1Cf734LbPGmqBKWESfW4x/dQ==
+  version "7.17.2"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.17.2.tgz#66f68591605e59da47523c631416b18508779941"
+  integrity sha512-hzeyJyMA1YGdJTuWU0e/j4wKXrU4OMFvY2MSlaI9B7VQb0r5cxTE3EAIS2Q7Tn2RIcDkRvTA/v2JsAEhxe99uw==
   dependencies:
     regenerator-runtime "^0.13.4"
 
@@ -6115,20 +6115,20 @@ duplexify@^3.4.2, duplexify@^3.6.0:
     stream-shift "^1.0.0"
 
 "dxswap-core@https://github.com/metrodao/dxswap-core.git", "dxswap-core@https://github.com/metrodao/dxswap-core.git#master":
-  version "0.4.7"
-  resolved "https://github.com/metrodao/dxswap-core.git#7eff9820083f10fd602967377cd47b65be091684"
+  version "0.4.8"
+  resolved "https://github.com/metrodao/dxswap-core.git#d9d08f95e67b7341d11cb0a868e3ffb1470519d0"
   dependencies:
     typescript "^3.9.5"
 
 "dxswap-periphery@https://github.com/metrodao/dxswap-periphery.git", "dxswap-periphery@https://github.com/metrodao/dxswap-periphery.git#master":
-  version "0.4.7"
-  resolved "https://github.com/metrodao/dxswap-periphery.git#e0454c5533a669bbca9090528ec5f3706716e74e"
+  version "0.4.8"
+  resolved "https://github.com/metrodao/dxswap-periphery.git#824b6ca251d088246ed79b2c7954fdab47da8fbe"
   dependencies:
     dxswap-core "https://github.com/metrodao/dxswap-core.git"
 
 "dxswap-sdk@https://github.com/metrodao/metroswap-sdk.git":
-  version "1.0.2"
-  resolved "https://github.com/metrodao/metroswap-sdk.git#5920b5280bb9b6259c583525300946e3a5b928f0"
+  version "1.0.7"
+  resolved "https://github.com/metrodao/metroswap-sdk.git#636181be61f5beef487a69fa7a9a2609b51fec5d"
   dependencies:
     "@makerdao/multicall" "^0.11.0"
     big.js "^5.2.2"
@@ -16575,9 +16575,9 @@ ws@^6.1.2, ws@^6.2.1:
     async-limiter "~1.0.0"
 
 ws@^7.2.0:
-  version "7.5.6"
-  resolved "https://registry.yarnpkg.com/ws/-/ws-7.5.6.tgz#e59fc509fb15ddfb65487ee9765c5a51dec5fe7b"
-  integrity sha512-6GLgCqo2cy2A2rjCNFlxQS6ZljG/coZfZXclldI8FB/1G3CCI36Zd8xy2HrFVACi8tfk5XrgLQEk+P0Tnz9UcA==
+  version "7.5.7"
+  resolved "https://registry.yarnpkg.com/ws/-/ws-7.5.7.tgz#9e0ac77ee50af70d58326ecff7e85eb3fa375e67"
+  integrity sha512-KMvVuFzpKBuiIXW3E4u3mySRO2/mCHSyZDJQM5NQ9Q9KHWHWh0NHgfbRMLLrceUK5qAL4ytALJbpRMjixFZh8A==
 
 x-is-string@^0.1.0:
   version "0.1.0"
