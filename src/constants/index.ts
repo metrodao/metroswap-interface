@@ -558,10 +558,10 @@ export const NETWORK_DETAIL: { [chainId: number]: NetworkDetails } = {
   },
   [ChainId.CALLISTO]: {
     chainId: `0x${ChainId.CALLISTO.toString(16)}`,
-    chainName: 'BitTorrent',
+    chainName: 'Callisto',
     nativeCurrency: {
-      name: Currency.CLO.name || 'BitTorrent',
-      symbol: Currency.CLO.symbol || 'BTT',
+      name: Currency.CLO.name || 'Callisto',
+      symbol: Currency.CLO.symbol || 'CLO',
       decimals: Currency.CLO.decimals || 18
     },
     rpcUrls: ['https://clo-geth.0xinfra.com/'],
