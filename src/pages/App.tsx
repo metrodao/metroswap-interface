@@ -27,6 +27,7 @@ const HeaderWrapper = styled.div`
   z-index: 4;
   height: 86px;
   justify-content: space-between;
+  background: black;
 `
 
 const BodyWrapper = styled.div`

@@ -48,9 +48,9 @@ export function colors(darkMode: boolean): Colors {
     grd2: darkMode ? '#212429' : '#FAFAE2',
     grd3: darkMode ? '#394F50' : '#CBF3EF', */
     // kedia: metroswap
-    grd1: darkMode ? '#000000' : '#FFC3AB',
-    grd2: darkMode ? '#878787' : '#FAFAE2',
-    grd3: darkMode ? '#000000' : '#CBF3EF',
+    grd1: darkMode ? '#ffffff' : '#FFC3AB',
+    grd2: darkMode ? '#460303' : '#FAFAE2',
+    grd3: darkMode ? '#ffffff' : '#CBF3EF',
 
     // text
     text1: darkMode ? '#FFFFFF' : '#000000',
@@ -248,9 +248,9 @@ export const ThemedGlobalStyle = createGlobalStyle`
 html {
   color: ${({ theme }) => theme.text1};
   background-color: ${({ theme }) => theme.grd1};
-  background: linear-gradient(111.63deg, ${({ theme }) => theme.grd1} 0%, ${({ theme }) => theme.grd2} 49.48%, ${({
-  theme
-}) => theme.grd3} 100%);
+  background: linear-gradient(90deg, ${({ theme }) => theme.grd1} 0%, ${({ theme }) => theme.grd2} 49.48%, ${({
+    theme
+  }) => theme.grd3} 100%);
 }
 body {
   min-height: 100vh;

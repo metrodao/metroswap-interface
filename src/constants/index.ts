@@ -47,7 +47,7 @@ export const USDC: { [key: number]: Token } = {
   [ChainId.FANTOM]: new Token(ChainId.FANTOM, '0x04068DA6C83AFCFA0e13ba15A6696662335D5B75', 6, 'USDC', 'USD Coin'),
   [ChainId.HARMONY]: new Token(ChainId.HARMONY, '0x985458E523dB3d53125813eD68c274899e9DfAb4', 6, '1USDC', 'USD Coin'),
   [ChainId.BITTORRENT]: new Token(ChainId.BITTORRENT, '0xCa424b845497f7204D9301bd13Ff87C0E2e86FCF', 6, 'USDC', 'USD Coin BSC'),
-  [ChainId.CALLISTO]: new Token(ChainId.CALLISTO, '0xb14067B3C160E378DeEAFA8c0D03FF97Fbf0C408', 6, 'bUSDC', 'Bridged USDC (PoS)') // no USDC on Callisto
+  [ChainId.CALLISTO]: new Token(ChainId.CALLISTO, '0xb14067B3C160E378DeEAFA8c0D03FF97Fbf0C408', 6, 'bUSDC', 'Bridged USDC (PoS)')
 }
 
 export const USDT: { [key: number]: Token } = {
@@ -67,7 +67,7 @@ export const USDT: { [key: number]: Token } = {
   [ChainId.FANTOM]: new Token(ChainId.FANTOM, '0x049d68029688eAbF473097a2fC38ef61633A3C7A', 6, 'fUSDT', 'Frapped USDT'),
   [ChainId.HARMONY]: new Token(ChainId.HARMONY, '0x3C2B8Be99c50593081EAA2A724F0B8285F5aba8f', 6, '1USDT', 'Tether USD'),
   [ChainId.BITTORRENT]: new Token(ChainId.BITTORRENT, '0xdB28719F7f938507dBfe4f0eAe55668903D34a15', 6, 'USDT_t', 'Tether USD_TRON'),
-  [ChainId.CALLISTO]: new Token(ChainId.CALLISTO, '0x9053e6DB24b28A75CD31020B4Aa4B66Af86d53B4', 6, 'bUSDT', 'Bridged USDT (PoS)') // no USDT on Callisto
+  [ChainId.CALLISTO]: new Token(ChainId.CALLISTO, '0x9053e6DB24b28A75CD31020B4Aa4B66Af86d53B4', 6, 'bUSDT', 'Bridged USDT (PoS)')
 }
 
 export const WBTC: { [key: number]: Token } = {
@@ -99,7 +99,6 @@ export const WBTC: { [key: number]: Token } = {
     'WBTC',
     'Wrapped BTC'
   ),
-  // no WBTC on Binance, yet
   [ChainId.BINANCE]: new Token(
     ChainId.BINANCE,
     '0x50b7545627a5162f82a992c33b87adc75187b218',
@@ -140,15 +139,14 @@ export const WBTC: { [key: number]: Token } = {
     '0xA98b43551e9777e82616AEe9b6C5f3fb25A20386',
     8,
     'bBTC',
-    'Bridge Bitcoin (PoS)'
+    'Bridged Bitcoin (PoS)'
   ),
-  // no WBTC on Callisto
   [ChainId.CALLISTO]: new Token(
     ChainId.CALLISTO,
     '0x0bA9723882A698312af7491335dDAfc07597a1A0',
     8,
     'bBTC',
-    'Bridge Bitcoin (PoS)'
+    'Bridged Bitcoin (PoS)'
   )
 }
 

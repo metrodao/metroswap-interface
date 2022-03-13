@@ -6121,14 +6121,14 @@ duplexify@^3.4.2, duplexify@^3.6.0:
     typescript "^3.9.5"
 
 "dxswap-periphery@https://github.com/metrodao/dxswap-periphery.git", "dxswap-periphery@https://github.com/metrodao/dxswap-periphery.git#master":
-  version "0.4.8"
-  resolved "https://github.com/metrodao/dxswap-periphery.git#824b6ca251d088246ed79b2c7954fdab47da8fbe"
+  version "0.4.9"
+  resolved "https://github.com/metrodao/dxswap-periphery.git#beff8f24eaa02d81303f3b8289a7f34774da50a4"
   dependencies:
     dxswap-core "https://github.com/metrodao/dxswap-core.git"
 
 "dxswap-sdk@https://github.com/metrodao/metroswap-sdk.git":
-  version "1.0.7"
-  resolved "https://github.com/metrodao/metroswap-sdk.git#636181be61f5beef487a69fa7a9a2609b51fec5d"
+  version "1.0.8"
+  resolved "https://github.com/metrodao/metroswap-sdk.git#05bbb8581ae442ccbbd4a9f74817bb5439f5f112"
   dependencies:
     "@makerdao/multicall" "^0.11.0"
     big.js "^5.2.2"
