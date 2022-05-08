@@ -29,7 +29,8 @@ export const injected = new InjectedConnector({
       ChainId.FANTOM,
       ChainId.HARMONY,
       ChainId.BITTORRENT,
-      ChainId.CALLISTO
+      ChainId.CALLISTO,
+      ChainId.MOONBEAM
     ]
 })
 

@@ -248,9 +248,10 @@ export const ThemedGlobalStyle = createGlobalStyle`
 html {
   color: ${({ theme }) => theme.text1};
   background-color: ${({ theme }) => theme.grd1};
-  background: linear-gradient(90deg, ${({ theme }) => theme.grd1} 0%, ${({ theme }) => theme.grd2} 49.48%, ${({
+  /** background: linear-gradient(90deg, ${({ theme }) => theme.grd1} 0%, ${({ theme }) => theme.grd2} 49.48%, ${({
     theme
-  }) => theme.grd3} 100%);
+  }) => theme.grd3} 100%); */
+  background-image: url("https://assets.dust.llc/isometric/png/background-16.png");
 }
 body {
   min-height: 100vh;

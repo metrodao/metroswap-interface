@@ -31,6 +31,7 @@ import FantomLogo from '../../assets/images/fantom-logo.png'
 import HarmonyLogo from '../../assets/images/harmony-logo.png'
 import BittorrentLogo from '../../assets/images/bittorrent-logo.png'
 import CallistoLogo from '../../assets/images/callisto-logo.png'
+import MoonbeamLogo from '../../assets/images/moonbeam-logo.png'
 import { ChainId } from 'dxswap-sdk'
 import { useActiveWeb3React } from '../../hooks'
 
@@ -48,7 +49,8 @@ const ChainLogo: any = {
   [ChainId.FANTOM]: FantomLogo,
   [ChainId.HARMONY]: HarmonyLogo,
   [ChainId.BITTORRENT]: BittorrentLogo,
-  [ChainId.CALLISTO]: CallistoLogo
+  [ChainId.CALLISTO]: CallistoLogo,
+  [ChainId.MOONBEAM]: MoonbeamLogo
 }
 
 const ChainLabel: any = {
@@ -65,7 +67,8 @@ const ChainLabel: any = {
   [ChainId.FANTOM]: 'Fantom',
   [ChainId.HARMONY]: 'Harmony',
   [ChainId.BITTORRENT]: 'BitTorrent',
-  [ChainId.CALLISTO]: 'Callisto'
+  [ChainId.CALLISTO]: 'Callisto',
+  [ChainId.MOONBEAM]: 'Moonbeam'
 }
 
 const IconWrapper = styled.div<{ size?: number | null }>`

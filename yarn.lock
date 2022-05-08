@@ -1184,9 +1184,9 @@
     regenerator-runtime "^0.13.4"
 
 "@babel/runtime@^7.7.4":
-  version "7.17.2"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.17.2.tgz#66f68591605e59da47523c631416b18508779941"
-  integrity sha512-hzeyJyMA1YGdJTuWU0e/j4wKXrU4OMFvY2MSlaI9B7VQb0r5cxTE3EAIS2Q7Tn2RIcDkRvTA/v2JsAEhxe99uw==
+  version "7.17.9"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.17.9.tgz#d19fbf802d01a8cb6cf053a64e472d42c434ba72"
+  integrity sha512-lSiBBvodq29uShpWGNbgFdKYNiFDo5/HIYsaCEY9ff4sb10x9jizo2+pRrSyF4jKZCXqgzuqBOQKbUm90gQwJg==
   dependencies:
     regenerator-runtime "^0.13.4"
 
@@ -5744,10 +5744,17 @@ debug@^3.1.0, debug@^3.1.1, debug@^3.2.5, debug@^3.2.7:
   dependencies:
     ms "^2.1.1"
 
-debug@^4.0.1, debug@^4.1.0, debug@^4.1.1, debug@^4.3.2:
+debug@^4.0.1, debug@^4.1.0, debug@^4.3.2:
   version "4.3.3"
   resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.3.tgz#04266e0b70a98d4462e6e288e38259213332b664"
   integrity sha512-/zxw5+vh1Tfv+4Qn7a5nsbcJKPaSvCDhojn6FEl9vupwK2VCSDtEiEtqr8DFtzYFOdz63LBkxec7DYuc2jon6Q==
+  dependencies:
+    ms "2.1.2"
+
+debug@^4.1.1:
+  version "4.3.4"
+  resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.4.tgz#1319f6579357f2338d3337d2cdd4914bb5dcc865"
+  integrity sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==
   dependencies:
     ms "2.1.2"
 
@@ -6115,20 +6122,20 @@ duplexify@^3.4.2, duplexify@^3.6.0:
     stream-shift "^1.0.0"
 
 "dxswap-core@https://github.com/metrodao/dxswap-core.git", "dxswap-core@https://github.com/metrodao/dxswap-core.git#master":
-  version "0.4.8"
-  resolved "https://github.com/metrodao/dxswap-core.git#d9d08f95e67b7341d11cb0a868e3ffb1470519d0"
+  version "0.4.9"
+  resolved "https://github.com/metrodao/dxswap-core.git#1a8664cb2ad68f0992c0439c87b3e1a22ed2a34f"
   dependencies:
     typescript "^3.9.5"
 
 "dxswap-periphery@https://github.com/metrodao/dxswap-periphery.git", "dxswap-periphery@https://github.com/metrodao/dxswap-periphery.git#master":
-  version "0.4.9"
-  resolved "https://github.com/metrodao/dxswap-periphery.git#beff8f24eaa02d81303f3b8289a7f34774da50a4"
+  version "0.4.10"
+  resolved "https://github.com/metrodao/dxswap-periphery.git#f1db535baa39a831e972b9bd87ebcf59f99625c3"
   dependencies:
     dxswap-core "https://github.com/metrodao/dxswap-core.git"
 
 "dxswap-sdk@https://github.com/metrodao/metroswap-sdk.git":
-  version "1.0.8"
-  resolved "https://github.com/metrodao/metroswap-sdk.git#05bbb8581ae442ccbbd4a9f74817bb5439f5f112"
+  version "1.0.9"
+  resolved "https://github.com/metrodao/metroswap-sdk.git#a58dc2ce0ba821a5ce382863aefa2935a3385a67"
   dependencies:
     "@makerdao/multicall" "^0.11.0"
     big.js "^5.2.2"

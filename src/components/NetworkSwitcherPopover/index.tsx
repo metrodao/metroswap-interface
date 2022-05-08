@@ -16,6 +16,7 @@ import FantomLogo from '../../assets/images/fantom-logo.png'
 import HarmonyLogo from '../../assets/images/harmony-logo.png'
 import BittorrentLogo from '../../assets/images/bittorrent-logo.png'
 import CallistoLogo from '../../assets/images/callisto-logo.png'
+import MoonbeamLogo from '../../assets/images/moonbeam-logo.png'
 import Popover from '../Popover'
 import { useActiveWeb3React } from '../../hooks'
 import { useOnClickOutside } from '../../hooks/useOnClickOutside'
@@ -136,6 +137,13 @@ export default function NetworkSwitcherPopover({ children }: { children: ReactNo
               }}
               header={'Callisto'}
               logoSrc={CallistoLogo}
+            />
+            <Option
+              onClick={() => {
+                selectNetwork(ChainId.MOONBEAM)
+              }}
+              header={'Moonbeam'}
+              logoSrc={MoonbeamLogo}
             />
             <Option
               onClick={() => {

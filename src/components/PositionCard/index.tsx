@@ -28,7 +28,7 @@ export const HoverCard = styled(Card)`
 
 const StyledPositionCard = styled(GreyCard)`
   border: none;
-  padding: 24px 28px;
+  padding: 1px 1px;
   color: white;
   position: relative;
   overflow: hidden;

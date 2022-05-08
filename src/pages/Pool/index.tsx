@@ -104,7 +104,7 @@ export default function Pool() {
         <SwapPoolTabs active={'pool'} />
 
         <AutoColumn gap="lg" justify="center">
-          <AutoColumn gap="lg" style={{ width: '100%' }}>
+          <AutoColumn gap="lg" style={{ width: '100%', padding: '10px' }}>
             <TitleRow style={{ marginTop: '1rem' }} padding={'0'}>
               <HideSmall>
                 <TYPE.mediumHeader lineHeight="24px">Your liquidity</TYPE.mediumHeader>
