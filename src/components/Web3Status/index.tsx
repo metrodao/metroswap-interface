@@ -32,6 +32,8 @@ import HarmonyLogo from '../../assets/images/harmony-logo.png'
 import BittorrentLogo from '../../assets/images/bittorrent-logo.png'
 import CallistoLogo from '../../assets/images/callisto-logo.png'
 import MoonbeamLogo from '../../assets/images/moonbeam-logo.png'
+import CeloLogo from '../../assets/images/celo-logo.png'
+import EvmosLogo from '../../assets/images/evmos-logo.png'
 import { ChainId } from 'dxswap-sdk'
 import { useActiveWeb3React } from '../../hooks'
 
@@ -50,7 +52,9 @@ const ChainLogo: any = {
   [ChainId.HARMONY]: HarmonyLogo,
   [ChainId.BITTORRENT]: BittorrentLogo,
   [ChainId.CALLISTO]: CallistoLogo,
-  [ChainId.MOONBEAM]: MoonbeamLogo
+  [ChainId.MOONBEAM]: MoonbeamLogo,
+  [ChainId.CELO]: CeloLogo,
+  [ChainId.EVMOS]: EvmosLogo
 }
 
 const ChainLabel: any = {
@@ -68,7 +72,9 @@ const ChainLabel: any = {
   [ChainId.HARMONY]: 'Harmony',
   [ChainId.BITTORRENT]: 'BitTorrent',
   [ChainId.CALLISTO]: 'Callisto',
-  [ChainId.MOONBEAM]: 'Moonbeam'
+  [ChainId.MOONBEAM]: 'Moonbeam',
+  [ChainId.CELO]: 'Celo',
+  [ChainId.EVMOS]: 'Evmos'
 }
 
 const IconWrapper = styled.div<{ size?: number | null }>`

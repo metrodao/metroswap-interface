@@ -30,7 +30,9 @@ export const injected = new InjectedConnector({
       ChainId.HARMONY,
       ChainId.BITTORRENT,
       ChainId.CALLISTO,
-      ChainId.MOONBEAM
+      ChainId.MOONBEAM,
+      ChainId.CELO,
+      ChainId.EVMOS
     ]
 })
 

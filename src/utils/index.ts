@@ -31,7 +31,9 @@ const ETHERSCAN_PREFIXES: { [chainId in ChainId]: string } = {
   [ChainId.HARMONY]: '',
   [ChainId.BITTORRENT]: '',
   [ChainId.CALLISTO]: '',
-  [ChainId.MOONBEAM]: ''
+  [ChainId.MOONBEAM]: '',
+  [ChainId.CELO]: '',
+  [ChainId.EVMOS]: ''
 }
 
 const getExplorerPrefix = (chainId: ChainId) => {
@@ -60,8 +62,12 @@ const getExplorerPrefix = (chainId: ChainId) => {
       return 'https://scan.bt.io'
     case ChainId.CALLISTO:
       return 'https://explorer.callisto.network'
-      case ChainId.MOONBEAM:
-        return 'https://moonbeam.moonscan.io'
+    case ChainId.MOONBEAM:
+      return 'https://moonbeam.moonscan.io'
+    case ChainId.CELO:
+      return 'https://explorer.celo.org'
+    case ChainId.EVMOS:
+      return 'https://evm.evmos.org'
     default:
       return `https://${ETHERSCAN_PREFIXES[chainId] || ETHERSCAN_PREFIXES[1]}etherscan.io`
   }

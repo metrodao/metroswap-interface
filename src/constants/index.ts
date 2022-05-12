@@ -1,5 +1,5 @@
 import { AbstractConnector } from '@web3-react/abstract-connector'
-import { ChainId, JSBI, Percent, CurrencyAmount, WETH, WSPOA, WXDAI, Token, Currency, WMATIC, WAVAX, WBNB, WFUSE, WIOTX, WFTM, WONE, WBTT, WCLO, WGLMR } from 'dxswap-sdk'
+import { ChainId, JSBI, Percent, CurrencyAmount, WETH, WSPOA, WXDAI, Token, Currency, WMATIC, WAVAX, WBNB, WFUSE, WIOTX, WFTM, WONE, WBTT, WCLO, WGLMR, WCELO, WEVMOS } from 'dxswap-sdk'
 import { tokens } from './tokens'
 import { injected, walletConnectMATIC, walletConnectXDAI, walletlink } from '../connectors'
 
@@ -28,7 +28,9 @@ export const DAI: { [key: number]: Token } = {
   [ChainId.HARMONY]: new Token(ChainId.HARMONY, '0xEf977d2f931C1978Db5F6747666fa1eACB0d0339', 18, '1DAI', 'Dai Stablecoin'),
   [ChainId.BITTORRENT]: new Token(ChainId.BITTORRENT, '0xE6F3a758298d88Ae5fA56d632D4e195a44A9Ae96', 18, 'bDAI', 'Bridged DAI (PoS)'), // currently Tetcoin Bridge Token on BTT Chain
   [ChainId.CALLISTO]: new Token(ChainId.CALLISTO, '0xc9616280Cc74B3B2196D32325f5278a7c2B593C4', 18, 'bDAI', 'Bridged DAI (PoS)'), // no DAI on Callisto
-  [ChainId.MOONBEAM]: new Token(ChainId.MOONBEAM, '0xc234A67a4F840E61adE794be47de455361b52413', 18, 'DAI', 'DAI Stablecoin')
+  [ChainId.MOONBEAM]: new Token(ChainId.MOONBEAM, '0x765277EebeCA2e31912C9946eAe1021199B39C61', 18, 'DAI', 'DAI Stablecoin'),
+  [ChainId.CELO]: new Token(ChainId.CELO, '0xE4fE50cdD716522A56204352f00AA110F731932d', 18, 'DAI', 'DAI Stablecoin'),
+  [ChainId.EVMOS]: new Token(ChainId.EVMOS, '0x63743ACF2c7cfee65A5E356A4C4A005b586fC7AA', 18, 'DAI', 'DAI Stablecoin')
 }
 
 export const USDC: { [key: number]: Token } = {
@@ -49,7 +51,9 @@ export const USDC: { [key: number]: Token } = {
   [ChainId.HARMONY]: new Token(ChainId.HARMONY, '0x985458E523dB3d53125813eD68c274899e9DfAb4', 6, '1USDC', 'USD Coin'),
   [ChainId.BITTORRENT]: new Token(ChainId.BITTORRENT, '0xCa424b845497f7204D9301bd13Ff87C0E2e86FCF', 6, 'USDC', 'USD Coin BSC'),
   [ChainId.CALLISTO]: new Token(ChainId.CALLISTO, '0xb14067B3C160E378DeEAFA8c0D03FF97Fbf0C408', 6, 'bUSDC', 'Bridged USDC (PoS)'),
-  [ChainId.MOONBEAM]: new Token(ChainId.MOONBEAM, '0x818ec0A7Fe18Ff94269904fCED6AE3DaE6d6dC0b', 6, 'USDC', 'USD Coin')
+  [ChainId.MOONBEAM]: new Token(ChainId.MOONBEAM, '0x818ec0A7Fe18Ff94269904fCED6AE3DaE6d6dC0b', 6, 'USDC', 'USD Coin'),
+  [ChainId.CELO]: new Token(ChainId.CELO, '0xef4229c8c3250C675F21BCefa42f58EfbfF6002a', 6, 'USDC', 'USD Coin'),
+  [ChainId.EVMOS]: new Token(ChainId.EVMOS, '0x51e44FfaD5C2B122C8b635671FCC8139dc636E82', 6, 'USDC', 'USD Coin')
 }
 
 export const USDT: { [key: number]: Token } = {
@@ -70,7 +74,9 @@ export const USDT: { [key: number]: Token } = {
   [ChainId.HARMONY]: new Token(ChainId.HARMONY, '0x3C2B8Be99c50593081EAA2A724F0B8285F5aba8f', 6, '1USDT', 'Tether USD'),
   [ChainId.BITTORRENT]: new Token(ChainId.BITTORRENT, '0xdB28719F7f938507dBfe4f0eAe55668903D34a15', 6, 'USDT_t', 'Tether USD_TRON'),
   [ChainId.CALLISTO]: new Token(ChainId.CALLISTO, '0x9053e6DB24b28A75CD31020B4Aa4B66Af86d53B4', 6, 'bUSDT', 'Bridged USDT (PoS)'),
-  [ChainId.MOONBEAM]: new Token(ChainId.MOONBEAM, '0xeFAeeE334F0Fd1712f9a8cc375f427D9Cdd40d73', 6, 'USDT', 'Tether USD')
+  [ChainId.MOONBEAM]: new Token(ChainId.MOONBEAM, '0xeFAeeE334F0Fd1712f9a8cc375f427D9Cdd40d73', 6, 'USDT', 'Tether USD'),
+  [ChainId.CELO]: new Token(ChainId.CELO, '0x88eeC49252c8cbc039DCdB394c0c2BA2f1637EA0', 6, 'USDT', 'Tether USD'),
+  [ChainId.EVMOS]: new Token(ChainId.EVMOS, '0x7FF4a56B32ee13D7D4D405887E0eA37d61Ed919e', 6, 'USDT', 'Tether USD')
 }
 
 export const WBTC: { [key: number]: Token } = {
@@ -157,6 +163,20 @@ export const WBTC: { [key: number]: Token } = {
     8,
     'bBTC',
     'Bridged Bitcoin (PoS)'
+  ),
+  [ChainId.CELO]: new Token(
+    ChainId.CELO,
+    '0xD629eb00dEced2a080B7EC630eF6aC117e614f1b',
+    8,
+    'BTC',
+    'Wrapped Bitcoin'
+  ),
+  [ChainId.EVMOS]: new Token(
+    ChainId.EVMOS,
+    '0xF80699Dc594e00aE7bA200c7533a07C1604A106D',
+    8,
+    'WBTC',
+    'Wrapped Bitcoin'
   )
 }
 
@@ -288,6 +308,20 @@ export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
     DAI[ChainId.MOONBEAM],
     USDC[ChainId.MOONBEAM],
     USDT[ChainId.MOONBEAM]
+  ],
+  [ChainId.CELO]: [
+    WETH[ChainId.CELO],
+    WCELO[ChainId.CELO],
+    DAI[ChainId.CELO],
+    USDC[ChainId.CELO],
+    USDT[ChainId.CELO]
+  ],
+  [ChainId.EVMOS]: [
+    WETH[ChainId.EVMOS],
+    WEVMOS[ChainId.EVMOS],
+    DAI[ChainId.EVMOS],
+    USDC[ChainId.EVMOS],
+    USDT[ChainId.EVMOS]
   ]
 }
 
@@ -310,7 +344,9 @@ export const SUGGESTED_BASES: ChainTokenList = {
   [ChainId.HARMONY]: [DAI[ChainId.HARMONY], USDC[ChainId.HARMONY], USDT[ChainId.HARMONY], WBTC[ChainId.HARMONY]],
   [ChainId.BITTORRENT]: [DAI[ChainId.BITTORRENT], USDC[ChainId.BITTORRENT], USDT[ChainId.BITTORRENT]],
   [ChainId.CALLISTO]: [DAI[ChainId.CALLISTO], USDC[ChainId.CALLISTO], USDT[ChainId.CALLISTO]],
-  [ChainId.MOONBEAM]: [DAI[ChainId.MOONBEAM], USDC[ChainId.MOONBEAM], USDT[ChainId.MOONBEAM]]
+  [ChainId.MOONBEAM]: [DAI[ChainId.MOONBEAM], USDC[ChainId.MOONBEAM], USDT[ChainId.MOONBEAM]],
+  [ChainId.CELO]: [DAI[ChainId.CELO], USDC[ChainId.CELO], USDT[ChainId.CELO]],
+  [ChainId.EVMOS]: [DAI[ChainId.EVMOS], USDC[ChainId.EVMOS], USDT[ChainId.EVMOS]]
 }
 
 // used to construct the list of all pairs we consider by default in the frontend
@@ -337,7 +373,9 @@ export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
   [ChainId.HARMONY]: [WETH[ChainId.HARMONY], DAI[ChainId.HARMONY], USDC[ChainId.HARMONY], USDT[ChainId.HARMONY]],
   [ChainId.BITTORRENT]: [WETH[ChainId.BITTORRENT], DAI[ChainId.BITTORRENT], USDC[ChainId.BITTORRENT], USDT[ChainId.BITTORRENT]],
   [ChainId.CALLISTO]: [WETH[ChainId.CALLISTO], DAI[ChainId.CALLISTO], USDC[ChainId.CALLISTO], USDT[ChainId.CALLISTO]],
-  [ChainId.MOONBEAM]: [WETH[ChainId.MOONBEAM], DAI[ChainId.MOONBEAM], USDC[ChainId.MOONBEAM], USDT[ChainId.MOONBEAM]]
+  [ChainId.MOONBEAM]: [WETH[ChainId.MOONBEAM], DAI[ChainId.MOONBEAM], USDC[ChainId.MOONBEAM], USDT[ChainId.MOONBEAM]],
+  [ChainId.CELO]: [WETH[ChainId.CELO], DAI[ChainId.CELO], USDC[ChainId.CELO], USDT[ChainId.CELO]],
+  [ChainId.EVMOS]: [WETH[ChainId.EVMOS], DAI[ChainId.EVMOS], USDC[ChainId.EVMOS], USDT[ChainId.EVMOS]]
 }
 
 export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } = {
@@ -595,6 +633,30 @@ export const NETWORK_DETAIL: { [chainId: number]: NetworkDetails } = {
     },
     rpcUrls: ['https://rpc.api.moonbeam.network/'],
     blockExplorerUrls: ['https://moonbeam.moonscan.io/'],
+    metamaskAddable: true
+  },
+  [ChainId.CELO]: {
+    chainId: `0x${ChainId.CELO.toString(16)}`,
+    chainName: 'Celo',
+    nativeCurrency: {
+      name: Currency.CELO.name || 'Celo',
+      symbol: Currency.CELO.symbol || 'CELO',
+      decimals: Currency.CELO.decimals || 18
+    },
+    rpcUrls: ['https://forno.celo.org/'],
+    blockExplorerUrls: ['https://explorer.celo.org/'],
+    metamaskAddable: true
+  },
+  [ChainId.EVMOS]: {
+    chainId: `0x${ChainId.EVMOS.toString(16)}`,
+    chainName: 'Evmos',
+    nativeCurrency: {
+      name: Currency.EVMOS.name || 'Evmos',
+      symbol: Currency.EVMOS.symbol || 'EVMOS',
+      decimals: Currency.EVMOS.decimals || 18
+    },
+    rpcUrls: ['https://evmos-rpc2.binary.host/'],
+    blockExplorerUrls: ['https://evm.evmos.org/'],
     metamaskAddable: true
   }
 }

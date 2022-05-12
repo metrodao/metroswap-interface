@@ -17,6 +17,8 @@ import HarmonyLogo from '../../assets/images/harmony-logo.png'
 import BittorrentLogo from '../../assets/images/bittorrent-logo.png'
 import CallistoLogo from '../../assets/images/callisto-logo.png'
 import MoonbeamLogo from '../../assets/images/moonbeam-logo.png'
+import CeloLogo from '../../assets/images/celo-logo.png'
+import EvmosLogo from '../../assets/images/evmos-logo.png'
 import Popover from '../Popover'
 import { useActiveWeb3React } from '../../hooks'
 import { useOnClickOutside } from '../../hooks/useOnClickOutside'
@@ -144,6 +146,20 @@ export default function NetworkSwitcherPopover({ children }: { children: ReactNo
               }}
               header={'Moonbeam'}
               logoSrc={MoonbeamLogo}
+            />
+            <Option
+              onClick={() => {
+                selectNetwork(ChainId.CELO)
+              }}
+              header={'Celo'}
+              logoSrc={CeloLogo}
+            />
+            <Option
+              onClick={() => {
+                selectNetwork(ChainId.EVMOS)
+              }}
+              header={'Evmos'}
+              logoSrc={EvmosLogo}
             />
             <Option
               onClick={() => {
