@@ -23,6 +23,7 @@ import AstarLogo from '../../assets/images/astar-logo.png'
 import SmartBCHLogo from '../../assets/images/smartbch-logo.png'
 import TelosLogo from '../../assets/images/telos-logo.png'
 import ZyxLogo from '../../assets/images/zyx-logo.png'
+import ThunderCoreLogo from '../../assets/images/thundercore-logo.png'
 import Popover from '../Popover'
 import { useActiveWeb3React } from '../../hooks'
 import { useOnClickOutside } from '../../hooks/useOnClickOutside'
@@ -192,6 +193,13 @@ export default function NetworkSwitcherPopover({ children }: { children: ReactNo
               }}
               header={'Zyx'}
               logoSrc={ZyxLogo}
+            />
+            <Option
+              onClick={() => {
+                selectNetwork(ChainId.THUNDERCORE)
+              }}
+              header={'ThunderCore'}
+              logoSrc={ThunderCoreLogo}
             />
             <Option
               onClick={() => {

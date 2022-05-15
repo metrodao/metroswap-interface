@@ -43,7 +43,8 @@ const EMPTY_LIST: TokenAddressMap = {
   [ChainId.ASTAR]: {},
   [ChainId.SMARTBCH]: {},
   [ChainId.TELOS]: {},
-  [ChainId.ZYX]: {}
+  [ChainId.ZYX]: {},
+  [ChainId.THUNDERCORE]: {}
 }
 
 export function tokenListToTokenMap(list: TokenInfo[]): TokenAddressMap {

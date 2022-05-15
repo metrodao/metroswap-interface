@@ -22,6 +22,7 @@ import AstarLogo from '../../assets/images/astar-logo.png'
 import SmartBCHLogo from '../../assets/images/smartbch-logo.png'
 import TelosLogo from '../../assets/images/telos-logo.png'
 import ZyxLogo from '../../assets/images/zyx-logo.png'
+import ThunderCoreLogo from '../../assets/images/thundercore-logo.png'
 import DXDLogo from '../../assets/svg/dxd.svg'
 import { useActiveWeb3React } from '../../hooks'
 import useHttpLocations from '../../hooks/useHttpLocations'
@@ -74,7 +75,8 @@ const NATIVE_CURRENCY_LOGO: { [chainId in ChainId]: string } = {
   [ChainId.ASTAR]: AstarLogo,
   [ChainId.SMARTBCH]: SmartBCHLogo,
   [ChainId.TELOS]: TelosLogo,
-  [ChainId.ZYX]: ZyxLogo
+  [ChainId.ZYX]: ZyxLogo,
+  [ChainId.THUNDERCORE]: ThunderCoreLogo
 }
 
 export default function CurrencyLogo({

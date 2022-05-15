@@ -38,6 +38,7 @@ import AstarLogo from '../../assets/images/astar-logo.png'
 import SmartBCHLogo from '../../assets/images/smartbch-logo.png'
 import TelosLogo from '../../assets/images/telos-logo.png'
 import ZyxLogo from '../../assets/images/zyx-logo.png'
+import ThunderCoreLogo from '../../assets/images/thundercore-logo.png'
 import { ChainId } from 'dxswap-sdk'
 import { useActiveWeb3React } from '../../hooks'
 
@@ -62,7 +63,8 @@ const ChainLogo: any = {
   [ChainId.ASTAR]: AstarLogo,
   [ChainId.SMARTBCH]: SmartBCHLogo,
   [ChainId.TELOS]: TelosLogo,
-  [ChainId.ZYX]: ZyxLogo
+  [ChainId.ZYX]: ZyxLogo,
+  [ChainId.THUNDERCORE]: ThunderCoreLogo
 }
 
 const ChainLabel: any = {
@@ -86,7 +88,8 @@ const ChainLabel: any = {
   [ChainId.ASTAR]: 'Astar',
   [ChainId.SMARTBCH]: 'SmartBCH',
   [ChainId.TELOS]: 'Telos',
-  [ChainId.ZYX]: 'Zyx'
+  [ChainId.ZYX]: 'Zyx',
+  [ChainId.THUNDERCORE]: 'ThunderCore'
 }
 
 const IconWrapper = styled.div<{ size?: number | null }>`

@@ -37,7 +37,8 @@ const ETHERSCAN_PREFIXES: { [chainId in ChainId]: string } = {
   [ChainId.ASTAR]: '',
   [ChainId.SMARTBCH]: '',
   [ChainId.TELOS]: '',
-  [ChainId.ZYX]: ''
+  [ChainId.ZYX]: '',
+  [ChainId.THUNDERCORE]: ''
 }
 
 const getExplorerPrefix = (chainId: ChainId) => {
@@ -80,6 +81,8 @@ const getExplorerPrefix = (chainId: ChainId) => {
       return 'https://teloscan.io'
     case ChainId.ZYX:
       return 'https://zyxscan.com/'
+    case ChainId.THUNDERCORE:
+      return 'https://viewblock.io/thundercore/'
     default:
       return `https://${ETHERSCAN_PREFIXES[chainId] || ETHERSCAN_PREFIXES[1]}etherscan.io`
   }

@@ -36,7 +36,8 @@ export const injected = new InjectedConnector({
       ChainId.ASTAR,
       ChainId.SMARTBCH,
       ChainId.TELOS,
-      ChainId.ZYX
+      ChainId.ZYX,
+      ChainId.THUNDERCORE
     ]
 })
 

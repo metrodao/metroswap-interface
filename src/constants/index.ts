@@ -1,5 +1,5 @@
 import { AbstractConnector } from '@web3-react/abstract-connector'
-import { ChainId, JSBI, Percent, CurrencyAmount, WETH, WSPOA, WXDAI, Token, Currency, WMATIC, WAVAX, WBNB, WFUSE, WIOTX, WFTM, WONE, WBTT, WCLO, WGLMR, WCELO, WEVMOS, WASTAR, WBCH, WTLOS, WZYX } from 'dxswap-sdk'
+import { ChainId, JSBI, Percent, CurrencyAmount, WETH, WSPOA, WXDAI, Token, Currency, WMATIC, WAVAX, WBNB, WFUSE, WIOTX, WFTM, WONE, WBTT, WCLO, WGLMR, WCELO, WEVMOS, WASTAR, WBCH, WTLOS, WZYX, WTT } from 'dxswap-sdk'
 import { tokens } from './tokens'
 import { injected, walletConnectMATIC, walletConnectXDAI, walletlink } from '../connectors'
 
@@ -34,7 +34,8 @@ export const DAI: { [key: number]: Token } = {
   [ChainId.ASTAR]: new Token(ChainId.ASTAR, '0x6De33698e9e9b787e09d3Bd7771ef63557E148bb', 18, 'DAI', 'DAI Stablecoin'),
   [ChainId.SMARTBCH]: new Token(ChainId.SMARTBCH, '0xf3f68E1Fd8FD5949C197299C97a6295687aEf9c3', 18, 'MDAI', 'Metro Wrapped DAI'),
   [ChainId.TELOS]: new Token(ChainId.TELOS, '0xB98650ca989ECECcb8c31341F3668b6995Aad8C5', 18, 'MDAI', 'Metro Wrapped DAI'),
-  [ChainId.ZYX]: new Token(ChainId.ZYX, '0xD9a80f791CC23615Db500e441c74b4287C9fd88d', 18, 'MDAI', 'Metro Wrapped DAI')
+  [ChainId.ZYX]: new Token(ChainId.ZYX, '0xD9a80f791CC23615Db500e441c74b4287C9fd88d', 18, 'MDAI', 'Metro Wrapped DAI'),
+  [ChainId.THUNDERCORE]: new Token(ChainId.THUNDERCORE, '0xB743e0c9020b27D415C533D905832af9Ab9e45f9', 18, 'MDAI', 'Metro Wrapped DAI')
 }
 
 export const USDC: { [key: number]: Token } = {
@@ -61,7 +62,8 @@ export const USDC: { [key: number]: Token } = {
   [ChainId.ASTAR]: new Token(ChainId.ASTAR, '0x6a2d262D56735DbA19Dd70682B39F6bE9a931D98', 6, 'USDC', 'USD Coin'),
   [ChainId.SMARTBCH]: new Token(ChainId.SMARTBCH, '0x6a2d262D56735DbA19Dd70682B39F6bE9a931D98', 6, 'MUSDC', 'Metro Wrapped USDC'),
   [ChainId.TELOS]: new Token(ChainId.TELOS, '0x818ec0A7Fe18Ff94269904fCED6AE3DaE6d6dC0b', 6, 'USDC', 'USD Coin'),
-  [ChainId.ZYX]: new Token(ChainId.ZYX, '0x493868A20b32a7e62Fae2cC8A3C2357f417Fd038', 6, 'MUSDC', 'Metro Wrapped USDC')
+  [ChainId.ZYX]: new Token(ChainId.ZYX, '0x493868A20b32a7e62Fae2cC8A3C2357f417Fd038', 6, 'MUSDC', 'Metro Wrapped USDC'),
+  [ChainId.THUNDERCORE]: new Token(ChainId.THUNDERCORE, '0x4d4B723F7dB1419517a560CFAF54eC7A431C1a43', 6, 'MUSDC', 'Metro Wrapped USDC')
 }
 
 export const USDT: { [key: number]: Token } = {
@@ -88,7 +90,8 @@ export const USDT: { [key: number]: Token } = {
   [ChainId.ASTAR]: new Token(ChainId.ASTAR, '0x3795C36e7D12A8c252A20C5a7B455f7c57b60283', 6, 'USDT', 'Tether USD'),
   [ChainId.SMARTBCH]: new Token(ChainId.SMARTBCH, '0xB743e0c9020b27D415C533D905832af9Ab9e45f9', 6, 'MUSDT', 'Metro Wrapped USDT'),
   [ChainId.TELOS]: new Token(ChainId.TELOS, '0xeFAeeE334F0Fd1712f9a8cc375f427D9Cdd40d73', 6, 'USDT', 'Tether USD'),
-  [ChainId.ZYX]: new Token(ChainId.ZYX, '0xd822f6549F76957a9b2e4a9Fd3FD70Cf8b709EFd', 6, 'MUSDT', 'Metro Wrapped USDT')
+  [ChainId.ZYX]: new Token(ChainId.ZYX, '0xd822f6549F76957a9b2e4a9Fd3FD70Cf8b709EFd', 6, 'MUSDT', 'Metro Wrapped USDT'),
+  [ChainId.THUNDERCORE]: new Token(ChainId.THUNDERCORE, '0x95319b44251925c2eE126Ed9aad57a68eFAA8231', 6, 'MUSDT', 'Metro Wrapped USDT')
 }
 
 export const WBTC: { [key: number]: Token } = {
@@ -214,6 +217,13 @@ export const WBTC: { [key: number]: Token } = {
   [ChainId.ZYX]: new Token(
     ChainId.ZYX,
     '0xdb6c67eD989305F4c092382548Edb5820d09ED81',
+    8,
+    'MBTC',
+    'Metro Wrapped Bitcoin'
+  ),
+  [ChainId.THUNDERCORE]: new Token(
+    ChainId.THUNDERCORE,
+    '0xEf62BAC28eE2d053ED98f96425682eB483F3c4c6',
     8,
     'MBTC',
     'Metro Wrapped Bitcoin'
@@ -390,6 +400,13 @@ export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
     DAI[ChainId.ZYX],
     USDC[ChainId.ZYX],
     USDT[ChainId.ZYX]
+  ],
+  [ChainId.THUNDERCORE]: [
+    WETH[ChainId.THUNDERCORE],
+    WTT[ChainId.THUNDERCORE],
+    DAI[ChainId.THUNDERCORE],
+    USDC[ChainId.THUNDERCORE],
+    USDT[ChainId.THUNDERCORE]
   ]
 }
 
@@ -418,7 +435,8 @@ export const SUGGESTED_BASES: ChainTokenList = {
   [ChainId.ASTAR]: [DAI[ChainId.ASTAR], USDC[ChainId.ASTAR], USDT[ChainId.ASTAR]],
   [ChainId.SMARTBCH]: [DAI[ChainId.SMARTBCH], USDC[ChainId.SMARTBCH], USDT[ChainId.SMARTBCH]],
   [ChainId.TELOS]: [DAI[ChainId.TELOS], USDC[ChainId.TELOS], USDT[ChainId.TELOS]],
-  [ChainId.ZYX]: [DAI[ChainId.ZYX], USDC[ChainId.ZYX], USDT[ChainId.ZYX]]
+  [ChainId.ZYX]: [DAI[ChainId.ZYX], USDC[ChainId.ZYX], USDT[ChainId.ZYX]],
+  [ChainId.THUNDERCORE]: [DAI[ChainId.THUNDERCORE], USDC[ChainId.THUNDERCORE], USDT[ChainId.THUNDERCORE]]
 }
 
 // used to construct the list of all pairs we consider by default in the frontend
@@ -451,7 +469,8 @@ export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
   [ChainId.ASTAR]: [WETH[ChainId.ASTAR], DAI[ChainId.ASTAR], USDC[ChainId.ASTAR], USDT[ChainId.ASTAR]],
   [ChainId.SMARTBCH]: [WETH[ChainId.SMARTBCH], DAI[ChainId.SMARTBCH], USDC[ChainId.SMARTBCH], USDT[ChainId.SMARTBCH]],
   [ChainId.TELOS]: [WETH[ChainId.TELOS], DAI[ChainId.TELOS], USDC[ChainId.TELOS], USDT[ChainId.TELOS]],
-  [ChainId.ZYX]: [WETH[ChainId.ZYX], DAI[ChainId.ZYX], USDC[ChainId.ZYX], USDT[ChainId.ZYX]]
+  [ChainId.ZYX]: [WETH[ChainId.ZYX], DAI[ChainId.ZYX], USDC[ChainId.ZYX], USDT[ChainId.ZYX]],
+  [ChainId.THUNDERCORE]: [WETH[ChainId.THUNDERCORE], DAI[ChainId.THUNDERCORE], USDC[ChainId.THUNDERCORE], USDT[ChainId.THUNDERCORE]]
 }
 
 export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } = {
@@ -781,6 +800,18 @@ export const NETWORK_DETAIL: { [chainId: number]: NetworkDetails } = {
     },
     rpcUrls: ['https://rpc-1.zyx.network/'],
     blockExplorerUrls: ['https://zyxscan.com/'],
+    metamaskAddable: true
+  },
+  [ChainId.THUNDERCORE]: {
+    chainId: `0x${ChainId.THUNDERCORE.toString(16)}`,
+    chainName: 'Zyx',
+    nativeCurrency: {
+      name: Currency.THUNDERCORE.name || 'ThunderCore',
+      symbol: Currency.THUNDERCORE.symbol || 'TT',
+      decimals: Currency.THUNDERCORE.decimals || 18
+    },
+    rpcUrls: ['https://mainnet-rpc.thundercore.com/'],
+    blockExplorerUrls: ['https://viewblock.io/thundercore/'],
     metamaskAddable: true
   }
 }
