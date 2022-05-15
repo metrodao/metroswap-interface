@@ -34,6 +34,10 @@ import CallistoLogo from '../../assets/images/callisto-logo.png'
 import MoonbeamLogo from '../../assets/images/moonbeam-logo.png'
 import CeloLogo from '../../assets/images/celo-logo.png'
 import EvmosLogo from '../../assets/images/evmos-logo.png'
+import AstarLogo from '../../assets/images/astar-logo.png'
+import SmartBCHLogo from '../../assets/images/smartbch-logo.png'
+import TelosLogo from '../../assets/images/telos-logo.png'
+import ZyxLogo from '../../assets/images/zyx-logo.png'
 import { ChainId } from 'dxswap-sdk'
 import { useActiveWeb3React } from '../../hooks'
 
@@ -54,7 +58,11 @@ const ChainLogo: any = {
   [ChainId.CALLISTO]: CallistoLogo,
   [ChainId.MOONBEAM]: MoonbeamLogo,
   [ChainId.CELO]: CeloLogo,
-  [ChainId.EVMOS]: EvmosLogo
+  [ChainId.EVMOS]: EvmosLogo,
+  [ChainId.ASTAR]: AstarLogo,
+  [ChainId.SMARTBCH]: SmartBCHLogo,
+  [ChainId.TELOS]: TelosLogo,
+  [ChainId.ZYX]: ZyxLogo
 }
 
 const ChainLabel: any = {
@@ -74,7 +82,11 @@ const ChainLabel: any = {
   [ChainId.CALLISTO]: 'Callisto',
   [ChainId.MOONBEAM]: 'Moonbeam',
   [ChainId.CELO]: 'Celo',
-  [ChainId.EVMOS]: 'Evmos'
+  [ChainId.EVMOS]: 'Evmos',
+  [ChainId.ASTAR]: 'Astar',
+  [ChainId.SMARTBCH]: 'SmartBCH',
+  [ChainId.TELOS]: 'Telos',
+  [ChainId.ZYX]: 'Zyx'
 }
 
 const IconWrapper = styled.div<{ size?: number | null }>`

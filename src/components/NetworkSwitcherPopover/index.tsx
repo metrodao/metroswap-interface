@@ -19,6 +19,10 @@ import CallistoLogo from '../../assets/images/callisto-logo.png'
 import MoonbeamLogo from '../../assets/images/moonbeam-logo.png'
 import CeloLogo from '../../assets/images/celo-logo.png'
 import EvmosLogo from '../../assets/images/evmos-logo.png'
+import AstarLogo from '../../assets/images/astar-logo.png'
+import SmartBCHLogo from '../../assets/images/smartbch-logo.png'
+import TelosLogo from '../../assets/images/telos-logo.png'
+import ZyxLogo from '../../assets/images/zyx-logo.png'
 import Popover from '../Popover'
 import { useActiveWeb3React } from '../../hooks'
 import { useOnClickOutside } from '../../hooks/useOnClickOutside'
@@ -160,6 +164,34 @@ export default function NetworkSwitcherPopover({ children }: { children: ReactNo
               }}
               header={'Evmos'}
               logoSrc={EvmosLogo}
+            />
+            <Option
+              onClick={() => {
+                selectNetwork(ChainId.ASTAR)
+              }}
+              header={'Astar'}
+              logoSrc={AstarLogo}
+            />
+            <Option
+              onClick={() => {
+                selectNetwork(ChainId.SMARTBCH)
+              }}
+              header={'SmartBCH'}
+              logoSrc={SmartBCHLogo}
+            />
+            <Option
+              onClick={() => {
+                selectNetwork(ChainId.TELOS)
+              }}
+              header={'Telos'}
+              logoSrc={TelosLogo}
+            />
+            <Option
+              onClick={() => {
+                selectNetwork(ChainId.ZYX)
+              }}
+              header={'Zyx'}
+              logoSrc={ZyxLogo}
             />
             <Option
               onClick={() => {

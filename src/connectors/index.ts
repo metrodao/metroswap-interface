@@ -32,7 +32,11 @@ export const injected = new InjectedConnector({
       ChainId.CALLISTO,
       ChainId.MOONBEAM,
       ChainId.CELO,
-      ChainId.EVMOS
+      ChainId.EVMOS,
+      ChainId.ASTAR,
+      ChainId.SMARTBCH,
+      ChainId.TELOS,
+      ChainId.ZYX
     ]
 })
 

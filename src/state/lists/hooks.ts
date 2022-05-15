@@ -39,7 +39,11 @@ const EMPTY_LIST: TokenAddressMap = {
   [ChainId.CALLISTO]: {},
   [ChainId.MOONBEAM]: {},
   [ChainId.CELO]: {},
-  [ChainId.EVMOS]: {}
+  [ChainId.EVMOS]: {},
+  [ChainId.ASTAR]: {},
+  [ChainId.SMARTBCH]: {},
+  [ChainId.TELOS]: {},
+  [ChainId.ZYX]: {}
 }
 
 export function tokenListToTokenMap(list: TokenInfo[]): TokenAddressMap {

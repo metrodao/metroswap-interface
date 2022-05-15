@@ -18,6 +18,10 @@ import CallistoLogo from '../../assets/images/callisto-logo.png'
 import MoonbeamLogo from '../../assets/images/moonbeam-logo.png'
 import CeloLogo from '../../assets/images/celo-logo.png'
 import EvmosLogo from '../../assets/images/evmos-logo.png'
+import AstarLogo from '../../assets/images/astar-logo.png'
+import SmartBCHLogo from '../../assets/images/smartbch-logo.png'
+import TelosLogo from '../../assets/images/telos-logo.png'
+import ZyxLogo from '../../assets/images/zyx-logo.png'
 import DXDLogo from '../../assets/svg/dxd.svg'
 import { useActiveWeb3React } from '../../hooks'
 import useHttpLocations from '../../hooks/useHttpLocations'
@@ -66,7 +70,11 @@ const NATIVE_CURRENCY_LOGO: { [chainId in ChainId]: string } = {
   [ChainId.CALLISTO]: CallistoLogo,
   [ChainId.MOONBEAM]: MoonbeamLogo,
   [ChainId.CELO]: CeloLogo,
-  [ChainId.EVMOS]: EvmosLogo
+  [ChainId.EVMOS]: EvmosLogo,
+  [ChainId.ASTAR]: AstarLogo,
+  [ChainId.SMARTBCH]: SmartBCHLogo,
+  [ChainId.TELOS]: TelosLogo,
+  [ChainId.ZYX]: ZyxLogo
 }
 
 export default function CurrencyLogo({

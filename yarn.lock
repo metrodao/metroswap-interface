@@ -6122,20 +6122,20 @@ duplexify@^3.4.2, duplexify@^3.6.0:
     stream-shift "^1.0.0"
 
 "dxswap-core@https://github.com/metrodao/dxswap-core.git", "dxswap-core@https://github.com/metrodao/dxswap-core.git#master":
-  version "0.5.1"
-  resolved "https://github.com/metrodao/dxswap-core.git#469409f7532f2f7150854ba40e01d45e5e2b8869"
+  version "0.5.5"
+  resolved "https://github.com/metrodao/dxswap-core.git#27053a66afe73d0f50c14ae373367d2fe4a5232d"
   dependencies:
     typescript "^3.9.5"
 
 "dxswap-periphery@https://github.com/metrodao/dxswap-periphery.git", "dxswap-periphery@https://github.com/metrodao/dxswap-periphery.git#master":
-  version "0.5.1"
-  resolved "https://github.com/metrodao/dxswap-periphery.git#cb6ae7b50bf42db3713726bdec57b495f7d353dd"
+  version "0.5.5"
+  resolved "https://github.com/metrodao/dxswap-periphery.git#01f3a61a724b8770b886d8435855b6965f5c1efe"
   dependencies:
     dxswap-core "https://github.com/metrodao/dxswap-core.git"
 
 "dxswap-sdk@https://github.com/metrodao/metroswap-sdk.git":
-  version "1.1.4"
-  resolved "https://github.com/metrodao/metroswap-sdk.git#2cf7a8959d8385801f84b677f4e364ea927abcb8"
+  version "1.2.3"
+  resolved "https://github.com/metrodao/metroswap-sdk.git#d8e3be0c3575aac071cdbe42ea9224889d643db4"
   dependencies:
     "@makerdao/multicall" "^0.11.0"
     big.js "^5.2.2"
