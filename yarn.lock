@@ -6134,8 +6134,8 @@ duplexify@^3.4.2, duplexify@^3.6.0:
     dxswap-core "https://github.com/metrodao/dxswap-core.git"
 
 "dxswap-sdk@https://github.com/metrodao/metroswap-sdk.git":
-  version "1.2.9"
-  resolved "https://github.com/metrodao/metroswap-sdk.git#8796feca6aa9a92199ad9819222968e47648e4be"
+  version "1.2.10"
+  resolved "https://github.com/metrodao/metroswap-sdk.git#d4b8afdbdb2f7fa2a350b25d9b4256f02c0efe66"
   dependencies:
     "@makerdao/multicall" "^0.11.0"
     big.js "^5.2.2"
