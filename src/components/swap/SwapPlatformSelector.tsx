@@ -16,7 +16,9 @@ import MetroswapLogo from '../../assets/svg/metroswap-logo.svg'
 import BaoswapLogo from '../../assets/images/baoswap-logo.png'
 import QuickswapLogo from '../../assets/images/quickswap-logo.png'
 import ApeswapLogo from '../../assets/images/apeswap-logo.svg'
-import DfynLogo from '../../assets/images/dfyn-logo.png'
+// dust - disable support for DFYN - Router is not standard
+// import DfynLogo from '../../assets/images/dfyn-logo.png'
+import RadioShackLogo from '../../assets/images/radioshack-logo.png'
 
 const ROUTABLE_PLATFORM_LOGO: { [routablePaltformName: string]: ReactNode } = {
   [RoutablePlatform.UNISWAP.name]: <img width={16} height={16} src={UniswapLogo} alt="uniswap" />,
@@ -27,7 +29,8 @@ const ROUTABLE_PLATFORM_LOGO: { [routablePaltformName: string]: ReactNode } = {
   [RoutablePlatform.BAOSWAP.name]: <img width={16} height={16} src={BaoswapLogo} alt="baoswap" />,
   [RoutablePlatform.QUICKSWAP.name]: <img width={16} height={16} src={QuickswapLogo} alt="quickswap" />,
   [RoutablePlatform.APESWAP.name]: <img width={16} height={16} src={ApeswapLogo} alt="apeswap" />,
-  [RoutablePlatform.DFYN.name]: <img width={16} height={16} src={DfynLogo} alt="dfyn" />
+  // [RoutablePlatform.DFYN.name]: <img width={16} height={16} src={DfynLogo} alt="dfyn" />
+  [RoutablePlatform.RADIOSHACK.name]: <img width={16} height={16} src={RadioShackLogo} alt="radioshack" />
 }
 
 export interface SwapPlatformSelectorProps {

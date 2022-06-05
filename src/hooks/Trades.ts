@@ -128,7 +128,8 @@ export function useTradeExactInAllPlatforms(
     useTradeExactIn(currencyAmountIn, currencyOut, RoutablePlatform.BAOSWAP),
     useTradeExactIn(currencyAmountIn, currencyOut, RoutablePlatform.QUICKSWAP),
     useTradeExactIn(currencyAmountIn, currencyOut, RoutablePlatform.APESWAP),
-    useTradeExactIn(currencyAmountIn, currencyOut, RoutablePlatform.DFYN)
+    // useTradeExactIn(currencyAmountIn, currencyOut, RoutablePlatform.DFYN)
+    useTradeExactIn(currencyAmountIn, currencyOut, RoutablePlatform.RADIOSHACK)
   ]
   return sortTradesByExecutionPrice(bestTrades)
 }
@@ -150,7 +151,8 @@ export function useTradeExactOutAllPlatforms(
     useTradeExactOut(currencyIn, currencyAmountOut, RoutablePlatform.BAOSWAP),
     useTradeExactOut(currencyIn, currencyAmountOut, RoutablePlatform.QUICKSWAP),
     useTradeExactOut(currencyIn, currencyAmountOut, RoutablePlatform.APESWAP),
-    useTradeExactOut(currencyIn, currencyAmountOut, RoutablePlatform.DFYN)
+    // useTradeExactOut(currencyIn, currencyAmountOut, RoutablePlatform.DFYN)
+    useTradeExactOut(currencyIn, currencyAmountOut, RoutablePlatform.RADIOSHACK)
   ]
   return sortTradesByExecutionPrice(bestTrades)
 }
