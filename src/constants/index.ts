@@ -1,7 +1,7 @@
 import { AbstractConnector } from '@web3-react/abstract-connector'
-import { ChainId, JSBI, Percent, CurrencyAmount, WETH, WSPOA, WXDAI, Token, Currency, WMATIC, WAVAX, WBNB, WFUSE, WIOTX, WFTM, WONE, WBTT, WCLO, WGLMR, WCELO, WEVMOS, WASTAR, WBCH, WTLOS, WZYX, WTT } from 'dxswap-sdk'
+import { ChainId, JSBI, Percent, CurrencyAmount, WETH, WSPOA, WXDAI, Token, Currency, WMATIC, WAVAX, WBNB, WFUSE, WIOTX, WFTM, WONE, WBTT, WCLO, WGLMR, WCELO, WEVMOS, WASTAR, WBCH, WTLOS, WZYX, WTT, WECH } from 'dxswap-sdk'
 import { tokens } from './tokens'
-import { injected, walletConnectMATIC, walletConnectXDAI, walletlink } from '../connectors'
+import { injected, walletConnectMATIC, walletConnectXDAI, walletConnectECHELON, walletlink } from '../connectors'
 
 export const ZERO_ADDRESS = '0x0000000000000000000000000000000000000000'
 
@@ -18,6 +18,7 @@ export const DAI: { [key: number]: Token } = {
     'DAI',
     'Dai Stablecoin'
   ),
+  [ChainId.ETHW]: new Token(ChainId.ETHW, '0x6b175474e89094c44da98b954eedeac495271d0f', 18, 'DAI', 'Dai Stablecoin'),
   [ChainId.XDAI]: new Token(ChainId.XDAI, '0x44fa8e6f47987339850636f88629646662444217', 18, 'DAI', 'Dai Stablecoin'),
   [ChainId.MATIC]: new Token(ChainId.MATIC, '0x8f3cf7ad23cd3cadbd9735aff958023239c6a063', 18, 'DAI', 'Dai Stablecoin'),
   [ChainId.AVALANCHE]: new Token(ChainId.AVALANCHE, '0xd586E7F844cEa2F87f50152665BCbc2C279D8d70', 18, 'DAI.e', 'Dai Stablecoin'),
@@ -35,11 +36,13 @@ export const DAI: { [key: number]: Token } = {
   [ChainId.SMARTBCH]: new Token(ChainId.SMARTBCH, '0xf3f68E1Fd8FD5949C197299C97a6295687aEf9c3', 18, 'MDAI', 'Metro Wrapped DAI'),
   [ChainId.TELOS]: new Token(ChainId.TELOS, '0xB98650ca989ECECcb8c31341F3668b6995Aad8C5', 18, 'MDAI', 'Metro Wrapped DAI'),
   [ChainId.ZYX]: new Token(ChainId.ZYX, '0xD9a80f791CC23615Db500e441c74b4287C9fd88d', 18, 'MDAI', 'Metro Wrapped DAI'),
-  [ChainId.THUNDERCORE]: new Token(ChainId.THUNDERCORE, '0xB743e0c9020b27D415C533D905832af9Ab9e45f9', 18, 'MDAI', 'Metro Wrapped DAI')
+  [ChainId.THUNDERCORE]: new Token(ChainId.THUNDERCORE, '0xB743e0c9020b27D415C533D905832af9Ab9e45f9', 18, 'MDAI', 'Metro Wrapped DAI'),
+  [ChainId.ECHELON]: new Token(ChainId.ECHELON, '0xB1103e931D6c0057BE3EC8514b99320090e2d6A7', 18, 'MDAI', 'Metro Wrapped DAI')
 }
 
 export const USDC: { [key: number]: Token } = {
   [ChainId.MAINNET]: new Token(ChainId.MAINNET, '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48', 6, 'USDC', 'USD//C'),
+  [ChainId.ETHW]: new Token(ChainId.ETHW, '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48', 6, 'USDC', 'USD//C'),
   [ChainId.XDAI]: new Token(
     ChainId.XDAI,
     '0xddafbb505ad214d7b80b1f830fccc89b60fb7a83',
@@ -63,11 +66,13 @@ export const USDC: { [key: number]: Token } = {
   [ChainId.SMARTBCH]: new Token(ChainId.SMARTBCH, '0x6a2d262D56735DbA19Dd70682B39F6bE9a931D98', 6, 'MUSDC', 'Metro Wrapped USDC'),
   [ChainId.TELOS]: new Token(ChainId.TELOS, '0x818ec0A7Fe18Ff94269904fCED6AE3DaE6d6dC0b', 6, 'USDC', 'USD Coin'),
   [ChainId.ZYX]: new Token(ChainId.ZYX, '0x493868A20b32a7e62Fae2cC8A3C2357f417Fd038', 6, 'MUSDC', 'Metro Wrapped USDC'),
-  [ChainId.THUNDERCORE]: new Token(ChainId.THUNDERCORE, '0x4d4B723F7dB1419517a560CFAF54eC7A431C1a43', 6, 'MUSDC', 'Metro Wrapped USDC')
+  [ChainId.THUNDERCORE]: new Token(ChainId.THUNDERCORE, '0x4d4B723F7dB1419517a560CFAF54eC7A431C1a43', 6, 'MUSDC', 'Metro Wrapped USDC'),
+  [ChainId.ECHELON]: new Token(ChainId.ECHELON, '0x10D9Ba55fc00eCb25A518D3C0268228cbD0cf1c9', 6, 'MUSDC', 'Metro Wrapped USDC')
 }
 
 export const USDT: { [key: number]: Token } = {
   [ChainId.MAINNET]: new Token(ChainId.MAINNET, '0xdAC17F958D2ee523a2206206994597C13D831ec7', 6, 'USDT', 'Tether USD'),
+  [ChainId.ETHW]: new Token(ChainId.ETHW, '0xdAC17F958D2ee523a2206206994597C13D831ec7', 6, 'USDT', 'Tether USD'),
   [ChainId.XDAI]: new Token(
     ChainId.XDAI,
     '0x4ecaba5870353805a9f068101a40e0f32ed605c6',
@@ -91,7 +96,8 @@ export const USDT: { [key: number]: Token } = {
   [ChainId.SMARTBCH]: new Token(ChainId.SMARTBCH, '0xB743e0c9020b27D415C533D905832af9Ab9e45f9', 6, 'MUSDT', 'Metro Wrapped USDT'),
   [ChainId.TELOS]: new Token(ChainId.TELOS, '0xeFAeeE334F0Fd1712f9a8cc375f427D9Cdd40d73', 6, 'USDT', 'Tether USD'),
   [ChainId.ZYX]: new Token(ChainId.ZYX, '0xd822f6549F76957a9b2e4a9Fd3FD70Cf8b709EFd', 6, 'MUSDT', 'Metro Wrapped USDT'),
-  [ChainId.THUNDERCORE]: new Token(ChainId.THUNDERCORE, '0x95319b44251925c2eE126Ed9aad57a68eFAA8231', 6, 'MUSDT', 'Metro Wrapped USDT')
+  [ChainId.THUNDERCORE]: new Token(ChainId.THUNDERCORE, '0x95319b44251925c2eE126Ed9aad57a68eFAA8231', 6, 'MUSDT', 'Metro Wrapped USDT'),
+  [ChainId.ECHELON]: new Token(ChainId.ECHELON, '0xB4fE73DD7a979368f8A8d49C7b896C01fC00A89B', 6, 'MUSDT', 'Metro Wrapped USDT')
 }
 
 export const WBTC: { [key: number]: Token } = {
@@ -102,6 +108,7 @@ export const WBTC: { [key: number]: Token } = {
     'WBTC',
     'Wrapped BTC'
   ),
+  [ChainId.ETHW]: new Token(ChainId.ETHW, '0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599', 18, 'WBTC', 'Wrapped BTC'),
   [ChainId.XDAI]: new Token(
     ChainId.XDAI,
     '0x8e5bBbb09Ed1ebdE8674Cda39A0c169401db4252',
@@ -137,20 +144,8 @@ export const WBTC: { [key: number]: Token } = {
     'WBTC',
     'Wrapped BTC on Fuse'
   ),
-  [ChainId.IOTEX]: new Token(
-    ChainId.IOTEX,
-    '0xC7b93720F73b037394cE00f954f849Ed484a3dEA',
-    18,
-    'ioWBTC',
-    'Wrapped BTC'
-  ),
-  [ChainId.FANTOM]: new Token(
-    ChainId.FANTOM,
-    '0x321162Cd933E2Be498Cd2267a90534A804051b11',
-    18,
-    'BTC',
-    'Bitcoin'
-  ),
+  [ChainId.IOTEX]: new Token(ChainId.IOTEX, '0xC7b93720F73b037394cE00f954f849Ed484a3dEA', 18, 'ioWBTC', 'Wrapped BTC'),
+  [ChainId.FANTOM]: new Token(ChainId.FANTOM, '0x321162Cd933E2Be498Cd2267a90534A804051b11', 18, 'BTC', 'Bitcoin'),
   [ChainId.HARMONY]: new Token(
     ChainId.HARMONY,
     '0x3095c7557bCb296ccc6e363DE01b760bA031F2d9',
@@ -179,27 +174,9 @@ export const WBTC: { [key: number]: Token } = {
     'bBTC',
     'Bridged Bitcoin (PoS)'
   ),
-  [ChainId.CELO]: new Token(
-    ChainId.CELO,
-    '0xD629eb00dEced2a080B7EC630eF6aC117e614f1b',
-    8,
-    'BTC',
-    'Wrapped Bitcoin'
-  ),
-  [ChainId.EVMOS]: new Token(
-    ChainId.EVMOS,
-    '0xF80699Dc594e00aE7bA200c7533a07C1604A106D',
-    8,
-    'WBTC',
-    'Wrapped Bitcoin'
-  ),
-  [ChainId.ASTAR]: new Token(
-    ChainId.ASTAR,
-    '0xad543f18cFf85c77E140E3E5E3c3392f6Ba9d5CA',
-    8,
-    'WBTC',
-    'Wrapped Bitcoin'
-  ),
+  [ChainId.CELO]: new Token(ChainId.CELO, '0xD629eb00dEced2a080B7EC630eF6aC117e614f1b', 8, 'BTC', 'Wrapped Bitcoin'),
+  [ChainId.EVMOS]: new Token(ChainId.EVMOS, '0xF80699Dc594e00aE7bA200c7533a07C1604A106D', 8, 'WBTC', 'Wrapped Bitcoin'),
+  [ChainId.ASTAR]: new Token(ChainId.ASTAR, '0xad543f18cFf85c77E140E3E5E3c3392f6Ba9d5CA', 8, 'WBTC', 'Wrapped Bitcoin'),
   [ChainId.SMARTBCH]: new Token(
     ChainId.SMARTBCH,
     '0x95319b44251925c2eE126Ed9aad57a68eFAA8231',
@@ -207,13 +184,7 @@ export const WBTC: { [key: number]: Token } = {
     'MBTC',
     'Metro Wrapped Bitcoin'
   ),
-  [ChainId.TELOS]: new Token(
-    ChainId.TELOS,
-    '0xf390830DF829cf22c53c8840554B98eafC5dCBc2',
-    8,
-    'WBTC',
-    'Wrapped Bitcoin'
-  ),
+  [ChainId.TELOS]: new Token(ChainId.TELOS, '0xf390830DF829cf22c53c8840554B98eafC5dCBc2', 8, 'WBTC', 'Wrapped Bitcoin'),
   [ChainId.ZYX]: new Token(
     ChainId.ZYX,
     '0xdb6c67eD989305F4c092382548Edb5820d09ED81',
@@ -224,6 +195,13 @@ export const WBTC: { [key: number]: Token } = {
   [ChainId.THUNDERCORE]: new Token(
     ChainId.THUNDERCORE,
     '0xEf62BAC28eE2d053ED98f96425682eB483F3c4c6',
+    8,
+    'MBTC',
+    'Metro Wrapped Bitcoin'
+  ),
+  [ChainId.ECHELON]: new Token(
+    ChainId.ECHELON,
+    '0x5bdc498967667C4298329d2c392cc88aD237AcfE',
     8,
     'MBTC',
     'Metro Wrapped Bitcoin'
@@ -269,6 +247,13 @@ export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
     USDC[ChainId.MAINNET],
     WBTC[ChainId.MAINNET],
     USDT[ChainId.MAINNET]
+  ],
+  [ChainId.ETHW]: [
+    WETH[ChainId.ETHW],
+    DAI[ChainId.ETHW],
+    USDC[ChainId.ETHW],
+    WBTC[ChainId.ETHW],
+    USDT[ChainId.ETHW]
   ],
   [ChainId.RINKEBY]: [WETH[ChainId.RINKEBY]],
   [ChainId.ARBITRUM_TESTNET_V3]: [WETH[ChainId.ARBITRUM_TESTNET_V3]],
@@ -407,6 +392,13 @@ export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
     DAI[ChainId.THUNDERCORE],
     USDC[ChainId.THUNDERCORE],
     USDT[ChainId.THUNDERCORE]
+  ],
+  [ChainId.ECHELON]: [
+    WETH[ChainId.ECHELON],
+    WECH[ChainId.ECHELON],
+    DAI[ChainId.ECHELON],
+    USDC[ChainId.ECHELON],
+    USDT[ChainId.ECHELON]
   ]
 }
 
@@ -414,6 +406,7 @@ export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
 // by default, so no need to add the wrapper to the list)
 export const SUGGESTED_BASES: ChainTokenList = {
   [ChainId.MAINNET]: [DAI[ChainId.MAINNET], USDC[ChainId.MAINNET], USDT[ChainId.MAINNET], WBTC[ChainId.MAINNET]],
+  [ChainId.ETHW]: [DAI[ChainId.ETHW], USDC[ChainId.ETHW], USDT[ChainId.ETHW], WBTC[ChainId.ETHW]],
   [ChainId.RINKEBY]: [],
   [ChainId.ARBITRUM_TESTNET_V3]: [],
   [ChainId.SOKOL]: [],
@@ -436,12 +429,14 @@ export const SUGGESTED_BASES: ChainTokenList = {
   [ChainId.SMARTBCH]: [DAI[ChainId.SMARTBCH], USDC[ChainId.SMARTBCH], USDT[ChainId.SMARTBCH]],
   [ChainId.TELOS]: [DAI[ChainId.TELOS], USDC[ChainId.TELOS], USDT[ChainId.TELOS]],
   [ChainId.ZYX]: [DAI[ChainId.ZYX], USDC[ChainId.ZYX], USDT[ChainId.ZYX]],
-  [ChainId.THUNDERCORE]: [DAI[ChainId.THUNDERCORE], USDC[ChainId.THUNDERCORE], USDT[ChainId.THUNDERCORE]]
+  [ChainId.THUNDERCORE]: [DAI[ChainId.THUNDERCORE], USDC[ChainId.THUNDERCORE], USDT[ChainId.THUNDERCORE]],
+  [ChainId.ECHELON]: [DAI[ChainId.ECHELON], USDC[ChainId.ECHELON], USDT[ChainId.ECHELON]]
 }
 
 // used to construct the list of all pairs we consider by default in the frontend
 export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
   [ChainId.MAINNET]: [WETH[ChainId.MAINNET], DAI[ChainId.MAINNET], USDC[ChainId.MAINNET], USDT[ChainId.MAINNET]],
+  [ChainId.ETHW]: [WETH[ChainId.ETHW], DAI[ChainId.ETHW], USDC[ChainId.ETHW], USDT[ChainId.ETHW]],
   [ChainId.RINKEBY]: [WETH[ChainId.RINKEBY]],
   [ChainId.ARBITRUM_TESTNET_V3]: [WETH[ChainId.ARBITRUM_TESTNET_V3]],
   [ChainId.SOKOL]: [Token.WSPOA[ChainId.SOKOL]],
@@ -470,13 +465,18 @@ export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
   [ChainId.SMARTBCH]: [WETH[ChainId.SMARTBCH], DAI[ChainId.SMARTBCH], USDC[ChainId.SMARTBCH], USDT[ChainId.SMARTBCH]],
   [ChainId.TELOS]: [WETH[ChainId.TELOS], DAI[ChainId.TELOS], USDC[ChainId.TELOS], USDT[ChainId.TELOS]],
   [ChainId.ZYX]: [WETH[ChainId.ZYX], DAI[ChainId.ZYX], USDC[ChainId.ZYX], USDT[ChainId.ZYX]],
-  [ChainId.THUNDERCORE]: [WETH[ChainId.THUNDERCORE], DAI[ChainId.THUNDERCORE], USDC[ChainId.THUNDERCORE], USDT[ChainId.THUNDERCORE]]
+  [ChainId.THUNDERCORE]: [WETH[ChainId.THUNDERCORE], DAI[ChainId.THUNDERCORE], USDC[ChainId.THUNDERCORE], USDT[ChainId.THUNDERCORE]],
+  [ChainId.ECHELON]: [WETH[ChainId.ECHELON], DAI[ChainId.ECHELON], USDC[ChainId.ECHELON], USDT[ChainId.ECHELON]]
 }
 
 export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } = {
   [ChainId.MAINNET]: [
     [USDC[ChainId.MAINNET], USDT[ChainId.MAINNET]],
     [DAI[ChainId.MAINNET], USDT[ChainId.MAINNET]]
+  ],
+  [ChainId.ETHW]: [
+    [USDC[ChainId.ETHW], USDT[ChainId.ETHW]],
+    [DAI[ChainId.ETHW], USDT[ChainId.ETHW]]
   ]
 }
 
@@ -530,6 +530,15 @@ export const SUPPORTED_WALLETS: { [key: string]: WalletInfo } = {
   WALLET_CONNECT_MATIC: {
     connector: walletConnectMATIC,
     name: 'WalletConnect for Polygon',
+    iconName: 'wallet-connect.svg',
+    description: 'Connect to Trust Wallet, Rainbow Wallet and more...',
+    href: null,
+    color: '#4196FC',
+    mobile: true
+  },
+  WALLET_CONNECT_ECHELON: {
+    connector: walletConnectECHELON,
+    name: 'WalletConnect for Echelon',
     iconName: 'wallet-connect.svg',
     description: 'Connect to Trust Wallet, Rainbow Wallet and more...',
     href: null,
@@ -593,6 +602,17 @@ export const NETWORK_DETAIL: { [chainId: number]: NetworkDetails } = {
     },
     rpcUrls: ['https://mainnet.infura.io/v3'],
     blockExplorerUrls: ['https://etherscan.io']
+  },
+  [ChainId.ETHW]: {
+    chainId: `0x${ChainId.ETHW.toString(16)}`,
+    chainName: 'EthereumPoW Main Network',
+    nativeCurrency: {
+      name: Currency.ETHW.name || 'Ether',
+      symbol: Currency.ETHW.symbol || 'ETHW',
+      decimals: Currency.ETHW.decimals || 18
+    },
+    rpcUrls: ['https://mainnet.ethereumpow.org'],
+    blockExplorerUrls: ['https://mainnet.ethwscan.com']
   },
   [ChainId.XDAI]: {
     chainId: `0x${ChainId.XDAI.toString(16)}`,
@@ -804,7 +824,7 @@ export const NETWORK_DETAIL: { [chainId: number]: NetworkDetails } = {
   },
   [ChainId.THUNDERCORE]: {
     chainId: `0x${ChainId.THUNDERCORE.toString(16)}`,
-    chainName: 'Zyx',
+    chainName: 'Thundercore',
     nativeCurrency: {
       name: Currency.THUNDERCORE.name || 'ThunderCore',
       symbol: Currency.THUNDERCORE.symbol || 'TT',
@@ -812,6 +832,18 @@ export const NETWORK_DETAIL: { [chainId: number]: NetworkDetails } = {
     },
     rpcUrls: ['https://mainnet-rpc.thundercore.com/'],
     blockExplorerUrls: ['https://viewblock.io/thundercore/'],
+    metamaskAddable: true
+  },
+  [ChainId.ECHELON]: {
+    chainId: `0x${ChainId.ECHELON.toString(16)}`,
+    chainName: 'Echelon',
+    nativeCurrency: {
+      name: Currency.ECHELON.name || 'Echelon',
+      symbol: Currency.ECHELON.symbol || 'ECH',
+      decimals: Currency.ECHELON.decimals || 18
+    },
+    rpcUrls: ['https://rpc.ech.network/'],
+    blockExplorerUrls: ['https://scout.ech.network/'],
     metamaskAddable: true
   }
 }

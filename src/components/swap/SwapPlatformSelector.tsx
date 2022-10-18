@@ -20,6 +20,9 @@ import ApeswapLogo from '../../assets/images/apeswap-logo.svg'
 // import DfynLogo from '../../assets/images/dfyn-logo.png'
 import RadioShackLogo from '../../assets/images/radioshack-logo.png'
 import PolycatLogo from '../../assets/images/polycat-logo.png'
+import SpookyfiLogo from '../../assets/images/spookyfi-logo.png'
+import TombswapLogo from '../../assets/images/tombswap-logo.png'
+import DefikingdomsLogo from '../../assets/images/defikingdoms-logo.png'
 
 const ROUTABLE_PLATFORM_LOGO: { [routablePaltformName: string]: ReactNode } = {
   [RoutablePlatform.UNISWAP.name]: <img width={16} height={16} src={UniswapLogo} alt="uniswap" />,
@@ -32,7 +35,10 @@ const ROUTABLE_PLATFORM_LOGO: { [routablePaltformName: string]: ReactNode } = {
   [RoutablePlatform.APESWAP.name]: <img width={16} height={16} src={ApeswapLogo} alt="apeswap" />,
   // [RoutablePlatform.DFYN.name]: <img width={16} height={16} src={DfynLogo} alt="dfyn" />
   [RoutablePlatform.RADIOSHACK.name]: <img width={16} height={16} src={RadioShackLogo} alt="radioshack" />,
-  [RoutablePlatform.POLYCAT.name]: <img width={16} height={16} src={PolycatLogo} alt="polycat" />
+  [RoutablePlatform.POLYCAT.name]: <img width={16} height={16} src={PolycatLogo} alt="polycat" />,
+  [RoutablePlatform.SPOOKYFI.name]: <img width={16} height={16} src={SpookyfiLogo} alt="spookyfi" />,
+  [RoutablePlatform.TOMBSWAP.name]: <img width={16} height={16} src={TombswapLogo} alt="tombswap" />,
+  [RoutablePlatform.DEFIKINGDOMS.name]: <img width={16} height={16} src={DefikingdomsLogo} alt="defikingdoms" />
 }
 
 export interface SwapPlatformSelectorProps {

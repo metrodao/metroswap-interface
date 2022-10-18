@@ -20,6 +20,7 @@ import WalletModal from '../WalletModal'
 import NetworkSwitcherPopover from '../NetworkSwitcherPopover'
 
 import EthereumLogo from '../../assets/images/ethereum-logo.png'
+import EthereumPoWLogo from '../../assets/images/ethw-logo.png'
 import XDAILogo from '../../assets/images/xdai-stake-logo.png'
 import ArbitrumLogo from '../../assets/images/arbitrum-logo.jpg'
 import MaticLogo from '../../assets/images/matic-logo.png'
@@ -39,11 +40,13 @@ import SmartBCHLogo from '../../assets/images/smartbch-logo.png'
 import TelosLogo from '../../assets/images/telos-logo.png'
 import ZyxLogo from '../../assets/images/zyx-logo.png'
 import ThunderCoreLogo from '../../assets/images/thundercore-logo.png'
+import EchelonLogo from '../../assets/images/echelon-logo.jpg'
 import { ChainId } from 'dxswap-sdk'
 import { useActiveWeb3React } from '../../hooks'
 
 const ChainLogo: any = {
-  // [ChainId.MAINNET]: EthereumLogo,
+  [ChainId.MAINNET]: EthereumLogo,
+  [ChainId.ETHW]: EthereumPoWLogo,
   [ChainId.RINKEBY]: EthereumLogo,
   [ChainId.ARBITRUM_TESTNET_V3]: ArbitrumLogo,
   [ChainId.SOKOL]: '',
@@ -64,11 +67,13 @@ const ChainLogo: any = {
   [ChainId.SMARTBCH]: SmartBCHLogo,
   [ChainId.TELOS]: TelosLogo,
   [ChainId.ZYX]: ZyxLogo,
-  [ChainId.THUNDERCORE]: ThunderCoreLogo
+  [ChainId.THUNDERCORE]: ThunderCoreLogo,
+  [ChainId.ECHELON]: EchelonLogo
 }
 
 const ChainLabel: any = {
   [ChainId.MAINNET]: 'Choose network',
+  [ChainId.ETHW]: 'EthereumPoW',
   [ChainId.RINKEBY]: 'Rinkeby',
   [ChainId.ARBITRUM_TESTNET_V3]: 'Arbitrum',
   [ChainId.SOKOL]: 'Sokol',
@@ -89,7 +94,8 @@ const ChainLabel: any = {
   [ChainId.SMARTBCH]: 'SmartBCH',
   [ChainId.TELOS]: 'Telos',
   [ChainId.ZYX]: 'Zyx',
-  [ChainId.THUNDERCORE]: 'ThunderCore'
+  [ChainId.THUNDERCORE]: 'ThunderCore',
+  [ChainId.ECHELON]: 'Echelon'
 }
 
 const IconWrapper = styled.div<{ size?: number | null }>`

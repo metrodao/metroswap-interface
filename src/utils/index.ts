@@ -20,6 +20,7 @@ const ETHERSCAN_PREFIXES: { [chainId in ChainId]: string } = {
   1: '',
   4: 'rinkeby.',
   [ChainId.ARBITRUM_TESTNET_V3]: '',
+  [ChainId.ETHW]: '',
   [ChainId.SOKOL]: '',
   [ChainId.XDAI]: '',
   [ChainId.MATIC]: '',
@@ -38,11 +39,14 @@ const ETHERSCAN_PREFIXES: { [chainId in ChainId]: string } = {
   [ChainId.SMARTBCH]: '',
   [ChainId.TELOS]: '',
   [ChainId.ZYX]: '',
-  [ChainId.THUNDERCORE]: ''
+  [ChainId.THUNDERCORE]: '',
+  [ChainId.ECHELON]: ''
 }
 
 const getExplorerPrefix = (chainId: ChainId) => {
   switch (chainId) {
+    case ChainId.ETHW:
+      return 'https://mainnet.ethwscan.com'
     case ChainId.ARBITRUM_TESTNET_V3:
       return 'https://explorer.arbitrum.io/#'
     case ChainId.SOKOL:
@@ -83,6 +87,8 @@ const getExplorerPrefix = (chainId: ChainId) => {
       return 'https://zyxscan.com/'
     case ChainId.THUNDERCORE:
       return 'https://viewblock.io/thundercore/'
+    case ChainId.ECHELON:
+      return 'https://scout.ech.network/'
     default:
       return `https://${ETHERSCAN_PREFIXES[chainId] || ETHERSCAN_PREFIXES[1]}etherscan.io`
   }

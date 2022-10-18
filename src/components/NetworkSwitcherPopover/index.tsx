@@ -5,6 +5,7 @@ import Option from './Option'
 import { ApplicationModal } from '../../state/application/actions'
 import { useModalOpen, useCloseModals, useAddPopup } from '../../state/application/hooks'
 
+import EthereumPoWLogo from '../../assets/images/ethw-logo.png'
 import ArbitrumLogo from '../../assets/images/arbitrum-logo.jpg'
 import XDAILogo from '../../assets/images/xdai-stake-logo.png'
 import MaticLogo from '../../assets/images/matic-logo.png'
@@ -24,6 +25,7 @@ import SmartBCHLogo from '../../assets/images/smartbch-logo.png'
 import TelosLogo from '../../assets/images/telos-logo.png'
 import ZyxLogo from '../../assets/images/zyx-logo.png'
 import ThunderCoreLogo from '../../assets/images/thundercore-logo.png'
+import EchelonLogo from '../../assets/images/echelon-logo.jpg'
 import Popover from '../Popover'
 import { useActiveWeb3React } from '../../hooks'
 import { useOnClickOutside } from '../../hooks/useOnClickOutside'
@@ -75,6 +77,13 @@ export default function NetworkSwitcherPopover({ children }: { children: ReactNo
       <Popover
         content={
           <OptionGrid>
+              <Option
+              onClick={() => {
+                selectNetwork(ChainId.ETHW)
+              }}
+              header={'EthereumPoW'}
+              logoSrc={EthereumPoWLogo}
+            />
             <Option
               onClick={() => {
                 selectNetwork(ChainId.XDAI)
@@ -200,6 +209,13 @@ export default function NetworkSwitcherPopover({ children }: { children: ReactNo
               }}
               header={'ThunderCore'}
               logoSrc={ThunderCoreLogo}
+            />
+            <Option
+              onClick={() => {
+                selectNetwork(ChainId.ECHELON)
+              }}
+              header={'Echelon'}
+              logoSrc={EchelonLogo}
             />
             <Option
               onClick={() => {

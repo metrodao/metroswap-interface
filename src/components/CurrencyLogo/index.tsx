@@ -4,6 +4,7 @@ import Skeleton from 'react-loading-skeleton'
 import styled from 'styled-components'
 
 import EthereumLogo from '../../assets/images/ethereum-logo.png'
+import EthereumPoWLogo from '../../assets/images/ethw-logo.png'
 import PoaLogo from '../../assets/images/poa-logo.png'
 import XDAILogo from '../../assets/images/xdai-logo.png'
 import MaticLogo from '../../assets/images/matic-logo.png'
@@ -23,6 +24,7 @@ import SmartBCHLogo from '../../assets/images/smartbch-logo.png'
 import TelosLogo from '../../assets/images/telos-logo.png'
 import ZyxLogo from '../../assets/images/zyx-logo.png'
 import ThunderCoreLogo from '../../assets/images/thundercore-logo.png'
+import EchelonLogo from '../../assets/images/echelon-logo.jpg'
 import DXDLogo from '../../assets/svg/dxd.svg'
 import { useActiveWeb3React } from '../../hooks'
 import useHttpLocations from '../../hooks/useHttpLocations'
@@ -57,6 +59,7 @@ const Wrapper = styled.div<{ size: string; marginRight: number; marginLeft: numb
 const NATIVE_CURRENCY_LOGO: { [chainId in ChainId]: string } = {
   [ChainId.ARBITRUM_TESTNET_V3]: EthereumLogo,
   [ChainId.MAINNET]: EthereumLogo,
+  [ChainId.ETHW]: EthereumPoWLogo,
   [ChainId.RINKEBY]: EthereumLogo,
   [ChainId.SOKOL]: PoaLogo,
   [ChainId.XDAI]: XDAILogo,
@@ -76,7 +79,8 @@ const NATIVE_CURRENCY_LOGO: { [chainId in ChainId]: string } = {
   [ChainId.SMARTBCH]: SmartBCHLogo,
   [ChainId.TELOS]: TelosLogo,
   [ChainId.ZYX]: ZyxLogo,
-  [ChainId.THUNDERCORE]: ThunderCoreLogo
+  [ChainId.THUNDERCORE]: ThunderCoreLogo,
+  [ChainId.ECHELON]: EchelonLogo
 }
 
 export default function CurrencyLogo({
