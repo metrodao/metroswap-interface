@@ -6,6 +6,7 @@ import { ApplicationModal } from '../../state/application/actions'
 import { useModalOpen, useCloseModals, useAddPopup } from '../../state/application/hooks'
 
 import EthereumPoWLogo from '../../assets/images/ethw-logo.png'
+import EthereumFairLogo from '../../assets/images/ethw-logo.png'
 import ArbitrumLogo from '../../assets/images/arbitrum-logo.jpg'
 import XDAILogo from '../../assets/images/xdai-stake-logo.png'
 import MaticLogo from '../../assets/images/matic-logo.png'
@@ -77,12 +78,19 @@ export default function NetworkSwitcherPopover({ children }: { children: ReactNo
       <Popover
         content={
           <OptionGrid>
-              <Option
+            <Option
               onClick={() => {
                 selectNetwork(ChainId.ETHW)
               }}
               header={'EthereumPoW'}
               logoSrc={EthereumPoWLogo}
+            />
+            <Option
+              onClick={() => {
+                selectNetwork(ChainId.ETF)
+              }}
+              header={'EthereumFair'}
+              logoSrc={EthereumFairLogo}
             />
             <Option
               onClick={() => {

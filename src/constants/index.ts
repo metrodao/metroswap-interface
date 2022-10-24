@@ -19,6 +19,7 @@ export const DAI: { [key: number]: Token } = {
     'Dai Stablecoin'
   ),
   [ChainId.ETHW]: new Token(ChainId.ETHW, '0x6b175474e89094c44da98b954eedeac495271d0f', 18, 'DAI', 'Dai Stablecoin'),
+  [ChainId.ETF]: new Token(ChainId.ETF, '0x6b175474e89094c44da98b954eedeac495271d0f', 18, 'DAI', 'Dai Stablecoin'),
   [ChainId.XDAI]: new Token(ChainId.XDAI, '0x44fa8e6f47987339850636f88629646662444217', 18, 'DAI', 'Dai Stablecoin'),
   [ChainId.MATIC]: new Token(ChainId.MATIC, '0x8f3cf7ad23cd3cadbd9735aff958023239c6a063', 18, 'DAI', 'Dai Stablecoin'),
   [ChainId.AVALANCHE]: new Token(ChainId.AVALANCHE, '0xd586E7F844cEa2F87f50152665BCbc2C279D8d70', 18, 'DAI.e', 'Dai Stablecoin'),
@@ -43,6 +44,7 @@ export const DAI: { [key: number]: Token } = {
 export const USDC: { [key: number]: Token } = {
   [ChainId.MAINNET]: new Token(ChainId.MAINNET, '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48', 6, 'USDC', 'USD//C'),
   [ChainId.ETHW]: new Token(ChainId.ETHW, '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48', 6, 'USDC', 'USD//C'),
+  [ChainId.ETF]: new Token(ChainId.ETF, '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48', 6, 'USDC', 'USD//C'),
   [ChainId.XDAI]: new Token(
     ChainId.XDAI,
     '0xddafbb505ad214d7b80b1f830fccc89b60fb7a83',
@@ -73,6 +75,7 @@ export const USDC: { [key: number]: Token } = {
 export const USDT: { [key: number]: Token } = {
   [ChainId.MAINNET]: new Token(ChainId.MAINNET, '0xdAC17F958D2ee523a2206206994597C13D831ec7', 6, 'USDT', 'Tether USD'),
   [ChainId.ETHW]: new Token(ChainId.ETHW, '0xdAC17F958D2ee523a2206206994597C13D831ec7', 6, 'USDT', 'Tether USD'),
+  [ChainId.ETF]: new Token(ChainId.ETF, '0xdAC17F958D2ee523a2206206994597C13D831ec7', 6, 'USDT', 'Tether USD'),
   [ChainId.XDAI]: new Token(
     ChainId.XDAI,
     '0x4ecaba5870353805a9f068101a40e0f32ed605c6',
@@ -109,6 +112,7 @@ export const WBTC: { [key: number]: Token } = {
     'Wrapped BTC'
   ),
   [ChainId.ETHW]: new Token(ChainId.ETHW, '0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599', 18, 'WBTC', 'Wrapped BTC'),
+  [ChainId.ETF]: new Token(ChainId.ETF, '0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599', 18, 'WBTC', 'Wrapped BTC'),
   [ChainId.XDAI]: new Token(
     ChainId.XDAI,
     '0x8e5bBbb09Ed1ebdE8674Cda39A0c169401db4252',
@@ -254,6 +258,13 @@ export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
     USDC[ChainId.ETHW],
     WBTC[ChainId.ETHW],
     USDT[ChainId.ETHW]
+  ],
+  [ChainId.ETF]: [
+    WETH[ChainId.ETF],
+    DAI[ChainId.ETF],
+    USDC[ChainId.ETF],
+    WBTC[ChainId.ETF],
+    USDT[ChainId.ETF]
   ],
   [ChainId.RINKEBY]: [WETH[ChainId.RINKEBY]],
   [ChainId.ARBITRUM_TESTNET_V3]: [WETH[ChainId.ARBITRUM_TESTNET_V3]],
@@ -407,6 +418,7 @@ export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
 export const SUGGESTED_BASES: ChainTokenList = {
   [ChainId.MAINNET]: [DAI[ChainId.MAINNET], USDC[ChainId.MAINNET], USDT[ChainId.MAINNET], WBTC[ChainId.MAINNET]],
   [ChainId.ETHW]: [DAI[ChainId.ETHW], USDC[ChainId.ETHW], USDT[ChainId.ETHW], WBTC[ChainId.ETHW]],
+  [ChainId.ETF]: [DAI[ChainId.ETF], USDC[ChainId.ETF], USDT[ChainId.ETF], WBTC[ChainId.ETF]],
   [ChainId.RINKEBY]: [],
   [ChainId.ARBITRUM_TESTNET_V3]: [],
   [ChainId.SOKOL]: [],
@@ -437,6 +449,7 @@ export const SUGGESTED_BASES: ChainTokenList = {
 export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
   [ChainId.MAINNET]: [WETH[ChainId.MAINNET], DAI[ChainId.MAINNET], USDC[ChainId.MAINNET], USDT[ChainId.MAINNET]],
   [ChainId.ETHW]: [WETH[ChainId.ETHW], DAI[ChainId.ETHW], USDC[ChainId.ETHW], USDT[ChainId.ETHW]],
+  [ChainId.ETF]: [WETH[ChainId.ETF], DAI[ChainId.ETF], USDC[ChainId.ETF], USDT[ChainId.ETF]],
   [ChainId.RINKEBY]: [WETH[ChainId.RINKEBY]],
   [ChainId.ARBITRUM_TESTNET_V3]: [WETH[ChainId.ARBITRUM_TESTNET_V3]],
   [ChainId.SOKOL]: [Token.WSPOA[ChainId.SOKOL]],
@@ -477,6 +490,10 @@ export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } 
   [ChainId.ETHW]: [
     [USDC[ChainId.ETHW], USDT[ChainId.ETHW]],
     [DAI[ChainId.ETHW], USDT[ChainId.ETHW]]
+  ],
+  [ChainId.ETF]: [
+    [USDC[ChainId.ETF], USDT[ChainId.ETF]],
+    [DAI[ChainId.ETF], USDT[ChainId.ETF]]
   ]
 }
 
@@ -613,6 +630,17 @@ export const NETWORK_DETAIL: { [chainId: number]: NetworkDetails } = {
     },
     rpcUrls: ['https://mainnet.ethereumpow.org'],
     blockExplorerUrls: ['https://mainnet.ethwscan.com']
+  },
+  [ChainId.ETF]: {
+    chainId: `0x${ChainId.ETF.toString(16)}`,
+    chainName: 'EthereumFair Main Network',
+    nativeCurrency: {
+      name: Currency.ETF.name || 'Ether',
+      symbol: Currency.ETF.symbol || 'ETF',
+      decimals: Currency.ETF.decimals || 18
+    },
+    rpcUrls: ['https://rpc.etherfair.org'],
+    blockExplorerUrls: ['https://www.oklink.com/en/ethf/']
   },
   [ChainId.XDAI]: {
     chainId: `0x${ChainId.XDAI.toString(16)}`,

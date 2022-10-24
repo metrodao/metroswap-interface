@@ -5,6 +5,7 @@ import styled from 'styled-components'
 
 import EthereumLogo from '../../assets/images/ethereum-logo.png'
 import EthereumPoWLogo from '../../assets/images/ethw-logo.png'
+import EthereumFairLogo from '../../assets/images/ethw-logo.png'
 import PoaLogo from '../../assets/images/poa-logo.png'
 import XDAILogo from '../../assets/images/xdai-logo.png'
 import MaticLogo from '../../assets/images/matic-logo.png'
@@ -60,6 +61,7 @@ const NATIVE_CURRENCY_LOGO: { [chainId in ChainId]: string } = {
   [ChainId.ARBITRUM_TESTNET_V3]: EthereumLogo,
   [ChainId.MAINNET]: EthereumLogo,
   [ChainId.ETHW]: EthereumPoWLogo,
+  [ChainId.ETF]: EthereumFairLogo,
   [ChainId.RINKEBY]: EthereumLogo,
   [ChainId.SOKOL]: PoaLogo,
   [ChainId.XDAI]: XDAILogo,

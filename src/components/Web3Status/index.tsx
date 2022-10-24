@@ -21,6 +21,7 @@ import NetworkSwitcherPopover from '../NetworkSwitcherPopover'
 
 import EthereumLogo from '../../assets/images/ethereum-logo.png'
 import EthereumPoWLogo from '../../assets/images/ethw-logo.png'
+import EthereumFairLogo from '../../assets/images/ethw-logo.png'
 import XDAILogo from '../../assets/images/xdai-stake-logo.png'
 import ArbitrumLogo from '../../assets/images/arbitrum-logo.jpg'
 import MaticLogo from '../../assets/images/matic-logo.png'
@@ -47,6 +48,7 @@ import { useActiveWeb3React } from '../../hooks'
 const ChainLogo: any = {
   [ChainId.MAINNET]: EthereumLogo,
   [ChainId.ETHW]: EthereumPoWLogo,
+  [ChainId.ETF]: EthereumFairLogo,
   [ChainId.RINKEBY]: EthereumLogo,
   [ChainId.ARBITRUM_TESTNET_V3]: ArbitrumLogo,
   [ChainId.SOKOL]: '',
@@ -74,6 +76,7 @@ const ChainLogo: any = {
 const ChainLabel: any = {
   [ChainId.MAINNET]: 'Choose network',
   [ChainId.ETHW]: 'EthereumPoW',
+  [ChainId.ETF]: 'EthereumFair',
   [ChainId.RINKEBY]: 'Rinkeby',
   [ChainId.ARBITRUM_TESTNET_V3]: 'Arbitrum',
   [ChainId.SOKOL]: 'Sokol',

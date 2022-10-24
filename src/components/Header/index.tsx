@@ -256,13 +256,13 @@ function Header({ history }: { history: any }) {
           >
             {t('pool')}
           </StyledNavLink>
-          <StyledExternalLink id={`stake-nav-link`} href={`https://1hive.org/`}>
+          <StyledExternalLink id={`stake-nav-link`} href={`https://tetcoin.org/`}>
             Governance{' '}
             <Text ml="4px" fontSize="11px">
               ↗
             </Text>
           </StyledExternalLink>
-          <StyledExternalLink id={`stake-nav-link`} href={`https://1hive.io/`}>
+          <StyledExternalLink id={`stake-nav-link`} href={`#`}>
             Farms{' '}
             <Text ml="4px" fontSize="11px">
               ↗

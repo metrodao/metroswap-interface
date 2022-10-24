@@ -21,6 +21,7 @@ const ETHERSCAN_PREFIXES: { [chainId in ChainId]: string } = {
   4: 'rinkeby.',
   [ChainId.ARBITRUM_TESTNET_V3]: '',
   [ChainId.ETHW]: '',
+  [ChainId.ETF]: '',
   [ChainId.SOKOL]: '',
   [ChainId.XDAI]: '',
   [ChainId.MATIC]: '',
@@ -47,6 +48,8 @@ const getExplorerPrefix = (chainId: ChainId) => {
   switch (chainId) {
     case ChainId.ETHW:
       return 'https://mainnet.ethwscan.com'
+      case ChainId.ETF:
+      return 'https://www.oklink.com/en/ethf'
     case ChainId.ARBITRUM_TESTNET_V3:
       return 'https://explorer.arbitrum.io/#'
     case ChainId.SOKOL:

@@ -37,6 +37,7 @@ export const network = new CustomNetworkConnector({
 export const injected = new InjectedConnector({
   supportedChainIds: [
       ChainId.ETHW,
+      ChainId.ETF,
       ChainId.RINKEBY, 
       ChainId.SOKOL, 
       ChainId.XDAI, 

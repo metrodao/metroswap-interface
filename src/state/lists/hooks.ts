@@ -24,6 +24,7 @@ export type TokenAddressMap = { [chainId in ChainId]: { [tokenAddress: string]: 
  */
 const EMPTY_LIST: TokenAddressMap = {
   [ChainId.ETHW]: {},
+  [ChainId.ETF]: {},
   [ChainId.RINKEBY]: {},
   [ChainId.MAINNET]: {},
   [ChainId.ARBITRUM_TESTNET_V3]: {},
